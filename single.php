@@ -1,7 +1,7 @@
 <?php
 get_header();
 $id=$post->ID;
-$page_post_meta_set = get_post_meta( $post->ID, 'zita_sidebar_dyn', true );?>
+$page_post_meta_set = get_post_meta( $post->ID, 'amaz_store_sidebar_dyn', true );?>
 <div id="content" class="page-content thunk-single-post  <?php echo esc_attr(amaz_store_sidebar_layout($page_post_meta_set,''));?>">
             <div class="container">
         	<div class="content-wrap">

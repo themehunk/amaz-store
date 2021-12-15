@@ -15,8 +15,8 @@ if (is_shop()) {
   $postid = $post->ID;
 }
 
-$page_woo_post_meta_set     = get_post_meta($postid, 'zita_sidebar_dyn', true);
-$page_content_post_meta_set = get_post_meta($postid, 'zita_content_dyn', true);
+$page_woo_post_meta_set     = get_post_meta($postid, 'amaz_store_sidebar_dyn', true);
+$page_content_post_meta_set = get_post_meta($postid, 'amaz_store_content_dyn', true);
 $amaz_store_sidebar_layout_ = amaz_store_sidebar_layout($page_woo_post_meta_set, '');
 get_header();
 ?>

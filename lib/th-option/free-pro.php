@@ -18,20 +18,6 @@
                      <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span></td>
                   </tr>
 
-                  
-                  
-                  <tr class="feature-row">
-                     <td class="title">
-                        <div class="title-wrap">
-                           <h4><?php _e('Header Layout','amaz-store'); ?> </h4>
-                        </div>
-                     </td>
-                     <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span><span class="info"><?php _e('(One layout)','amaz-store'); ?> </span></td>
-                     <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span><span class="info"><?php _e('(Four Layout)','amaz-store'); ?> </span></td>
-                  </tr>
-
-
-
                   <tr class="feature-row">
                      <td class="title">
                         <div class="title-wrap">
@@ -55,18 +41,15 @@
                      <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span><span class="info"><?php _e('(Advanced)','amaz-store'); ?> </span></td>
                   </tr>
 
-
                   <tr class="feature-row">
                      <td class="title">
                         <div class="title-wrap">
-                           <h4><?php _e('Top Slider Section','amaz-store'); ?> </h4>
+                           <h4><?php _e('Frontpage Header Slider','amaz-store'); ?> </h4>
                         </div>
                      </td>
                      <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span>
-                        <span class="info"><?php _e('(One Layouts)','amaz-store'); ?> </span></td>
 
                      <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span>
-                        <span class="info"><?php _e('(Four Layouts)','amaz-store'); ?> </span></td>
 
                   </tr>
 
@@ -74,13 +57,13 @@
                   <tr class="feature-row">
                      <td class="title">
                         <div class="title-wrap">
-                           <h4><?php _e('Ribbon Section ( Video & Image )','amaz-store'); ?> </h4>
+                           <h4><?php _e('Ribbon Section','amaz-store'); ?> </h4>
                         </div>
                      </td>
                      <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span>
                         </td>
 
-                     <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span>
+                     <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span><span class="info"><?php _e('(Image & Video)','amaz-store'); ?> </span>
                         </td>
 
                   </tr>
@@ -120,9 +103,9 @@
                            <h4><?php _e('Woo Category Section ','amaz-store'); ?> </h4>
                         </div>
                      </td>
-                     <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span>
+                     <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span><span class="info"><?php _e('(One Layout)','amaz-store'); ?> </span></td>
 
-                     <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span>
+                     <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span><span class="info"><?php _e('(Three Layout)','amaz-store'); ?> </span></td>
 
                   </tr>
 
@@ -151,50 +134,31 @@
                         </div>
                      </td>
                      <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span>
-                        <span class="info"><?php _e('(One Layouts)','amaz-store'); ?> </span></td>
+                        <span class="info"><?php _e('(Two Layouts)','amaz-store'); ?> </span></td>
 
                      <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span>
                         <span class="info"><?php _e('(Six Layouts)','amaz-store'); ?> </span></td>
 
                   </tr>
 
-
-
-                   <tr class="feature-row">
+                    <tr class="feature-row">
                      <td class="title">
                         <div class="title-wrap">
-                           <h4><?php _e('Highlight Section','amaz-store'); ?> </h4>
+                           <h4><?php _e('Highlight Section  ','amaz-store'); ?> </h4>
                         </div>
                      </td>
                      <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span>
-                        </td>
+                     </td>
 
                      <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span>
-                        </td>
+                     </td>
 
                   </tr>
-
 
                   <tr class="feature-row">
                      <td class="title">
                         <div class="title-wrap">
                            <h4><?php _e('Move to top','amaz-store'); ?> </h4>
-                        </div>
-                     </td>
-                     <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span>
-                        </td>
-
-                     <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span>
-                        </td>
-
-                  </tr>
-
-
-
-                  <tr class="feature-row">
-                     <td class="title">
-                        <div class="title-wrap">
-                           <h4><?php _e('Sticky Header','amaz-store'); ?> </h4>
                         </div>
                      </td>
                      <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span>
@@ -328,23 +292,6 @@
                      </td>
 
                   </tr>
-
-
-
-                  <tr class="feature-row">
-                     <td class="title">
-                        <div class="title-wrap">
-                           <h4><?php _e('Highlight Widget','amaz-store'); ?> </h4>
-                        </div>
-                     </td>
-                     <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span>
-                        </td>
-
-                     <td class="status success"><span class="dashicon dashicons dashicons-yes" size="30"></span>
-                     </td>
-
-                  </tr>
-
 
 
                   <tr class="feature-row">

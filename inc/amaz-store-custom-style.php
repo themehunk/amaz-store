@@ -101,16 +101,20 @@ $amaz_store_style.="
    }";
 
 //Product title in single line
+   /*******************/
+    /*text ellips css start*/
+  /*******************/
 $amaz_store_color_scheme = (bool)get_theme_mod('amaz_store_prdct_single',true);
-if($amaz_store_color_scheme==false){
+if($amaz_store_color_scheme==true){
    $amaz_store_style.=".thunk-woo-product-list .woocommerce-loop-product__title {
-    overflow: hidden;
-    text-overflow: inherit;
-    display: inherit;
-    -webkit-box-orient: inherit;
-    -webkit-line-clamp: inherit;
-    line-height: 24px;
-    max-height: inherit;}";
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-height: 24px;
+  max-height: 24px;
+}";
 }
   return $amaz_store_style;
 }
