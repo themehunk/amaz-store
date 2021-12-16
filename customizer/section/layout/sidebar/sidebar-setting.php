@@ -11,7 +11,7 @@
 // default layout
 /********************/
 $wp_customize->add_setting('amaz_store_sidebar_default_layout', array(
-        'default'        => 'right',
+        'default'        => 'no-sidebar',
         'capability'     => 'edit_theme_options',
         'sanitize_callback' => 'esc_attr',
     ));

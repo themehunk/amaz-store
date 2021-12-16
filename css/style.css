@@ -685,6 +685,9 @@ position:relative;
   color: #000;
   padding: 0 15px;
 }
+.top-header-col3 a{
+  color: inherit;
+}
 /*below header special css*/
 .below-header-col1{
   width: 80px;
@@ -2715,6 +2718,7 @@ vertical-align: middle;
 .amaz-store-widget-content .widget-title + *{
    border: 1px solid #eeeeee; 
    padding: 15px;
+   border-top: 0;
 }
 .widget-footer .widget-footer-wrap{
     padding: 30px 0px;
@@ -6971,6 +6975,12 @@ margin-top:10px;
     display: block !important;
     width: 17px;
     margin: 3px;
+}
+.sticky-header nav{
+  margin: 9px 0;
+}
+.logged-in .sticky-header{
+  top: 30px;
 }
 /*search wrapper*/
 .search-wrapper{

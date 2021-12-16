@@ -450,7 +450,7 @@
                         </div>
                      </td>
                      <td class="status upsell"><?php _e('Access to all Pro features','amaz-store'); ?> </td>
-                     <td class="status success"><a href="<?php echo esc_url('https://themehunk.com/product/amaz-store-pro/');?>" target="_blank" rel="external noreferrer noopener" class="components-button is-primary"><?php _e('Get Amaz Store Pro Now','amaz-store'); ?></a></td>
+                     <td class="status success"><a href="<?php echo esc_url('https://themehunk.com/product/amaz-store/');?>" target="_blank" rel="external noreferrer noopener" class="components-button is-primary"><?php _e('Get Amaz Store Pro Now','amaz-store'); ?></a></td>
                   </tr>
 
 
