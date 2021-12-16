@@ -26,6 +26,8 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 = 1.0.2 =
 * Theme Option Panel updated.
 * Sidebar setting issue resolved.
+* Product list section style improved.
+* Above Header color updated.
 
 = 1.0.1 =
 * Style Issue Resolved.
@@ -39,6 +41,8 @@ Initial release
 = 1.0.2 =
 * Theme Option Panel updated.
 * Sidebar setting issue resolved.
+* Product list section style improved.
+* Above Header color updated.
 
 == Resources ==
  
