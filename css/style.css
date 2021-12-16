@@ -2718,7 +2718,6 @@ vertical-align: middle;
 .amaz-store-widget-content .widget-title + *{
    border: 1px solid #eeeeee; 
    padding: 15px;
-   border-top: 0;
 }
 .widget-footer .widget-footer-wrap{
     padding: 30px 0px;
@@ -2827,7 +2826,6 @@ float: left;
     width: 60px;
     margin-left: 0;
     margin-right: 15px;
-    border: 1px solid #F1F1F1;
 border-radius:3px;
 }
 .woocommerce ul.cart_list li a, .woocommerce ul.product_list_widget li a{
@@ -3329,12 +3327,6 @@ color:#1c1d1e;
  -webkit-transition: all .2s ease 0s;
 -o-transition: all .58s ease 0s;
  transition: all .2s ease 0s;
-}
-.thunk-product-list .amaz-store-slide-item-hover.amaz-store-woo-hover-slide .thunk-product-image:hover img:first-of-type{
-    -webkit-transform: initial;
-    -ms-transform: initial;
-    -o-transform: initial;
-    transform: initial;
 }
 /****************************/
 /*woocommerce product style*/
@@ -4191,7 +4183,7 @@ display:none;
     position: relative;
 }
 .thunk-highlight-col{
-    width: 24%;
+    width: 23.5%;
     padding: 10px 15px;
     background: #FFF;
     border-radius: 5px;
