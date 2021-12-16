@@ -3,7 +3,7 @@
  *Sidebar Function for Amaz Store Theme
  */
 if ( ! function_exists( 'amaz_store_sidebar_layout' ) ){
-function amaz_store_sidebar_layout($page_post_meta_set='default', $default='right'){
+function amaz_store_sidebar_layout($page_post_meta_set='default', $default='no-sidebar'){
     $default_layout = get_theme_mod('amaz_store_sidebar_default_layout', $default );
     $page_layout = get_theme_mod('amaz_store_sidebar_page_layout','default' );
     $blog_layout = get_theme_mod('amaz_store_sidebar_blog_layout','default');

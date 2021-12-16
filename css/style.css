@@ -685,6 +685,9 @@ position:relative;
   color: #000;
   padding: 0 15px;
 }
+.top-header-col3 a{
+  color: inherit;
+}
 /*below header special css*/
 .below-header-col1{
   width: 80px;
@@ -2715,6 +2718,7 @@ vertical-align: middle;
 .amaz-store-widget-content .widget-title + *{
    border: 1px solid #eeeeee; 
    padding: 15px;
+   border-top: 0;
 }
 .widget-footer .widget-footer-wrap{
     padding: 30px 0px;
@@ -4187,13 +4191,14 @@ display:none;
     position: relative;
 }
 .thunk-highlight-col{
-    width: 25%;
+    width: 24%;
     padding: 10px 15px;
     background: #FFF;
     border-radius: 5px;
     text-align: center;
+    margin-right: 2%;
 }
-.thunk-highlight-col:nth-of-type(3n+3){
+.thunk-highlight-col:nth-of-type(4n+4){
   margin-right: 0;
 }
 .thunk-hglt-box{
@@ -6972,6 +6977,12 @@ margin-top:10px;
     width: 17px;
     margin: 3px;
 }
+.sticky-header nav{
+  margin: 9px 0;
+}
+.logged-in .sticky-header{
+  top: 30px;
+}
 /*search wrapper*/
 .search-wrapper{
     position: fixed;
@@ -9003,7 +9014,14 @@ margin-right:0;
   padding: 20px;
 }
 .thunk-highlight-col{
-  width: 50%;
+  width: 49%;
+  margin-bottom: 2%;
+}
+.thunk-highlight-col:nth-of-type(4n+4){
+  margin-right: 2%;
+}
+.thunk-highlight-col:nth-of-type(2n+2){
+  margin-right: 0;
 }
 .thunk-compare, .thunk-quickview{
   padding-left: 0;
