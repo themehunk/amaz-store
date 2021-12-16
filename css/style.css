@@ -4191,13 +4191,14 @@ display:none;
     position: relative;
 }
 .thunk-highlight-col{
-    width: 25%;
+    width: 24%;
     padding: 10px 15px;
     background: #FFF;
     border-radius: 5px;
     text-align: center;
+    margin-right: 2%;
 }
-.thunk-highlight-col:nth-of-type(3n+3){
+.thunk-highlight-col:nth-of-type(4n+4){
   margin-right: 0;
 }
 .thunk-hglt-box{
@@ -9013,7 +9014,14 @@ margin-right:0;
   padding: 20px;
 }
 .thunk-highlight-col{
-  width: 50%;
+  width: 49%;
+  margin-bottom: 2%;
+}
+.thunk-highlight-col:nth-of-type(4n+4){
+  margin-right: 2%;
+}
+.thunk-highlight-col:nth-of-type(2n+2){
+  margin-right: 0;
 }
 .thunk-compare, .thunk-quickview{
   padding-left: 0;
