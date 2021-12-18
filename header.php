@@ -54,6 +54,7 @@ if(!is_404() && !is_search() && is_page()){
 <?php do_action('amaz_store_site_preloader'); 
 $amaz_store_above_header_col3_set   = get_theme_mod( 'amaz_store_above_header_col3_set','text');
 $amaz_store_menu_open = get_theme_mod('amaz_store_mobile_menu_open','left');
+$offcanvas = get_theme_mod('amaz_store_canvas_alignment','cnv-none');
 $amaz_store_inner_above_header_select = get_theme_mod('amaz_store_inner_above_header_select','homepageslider');
 if (is_front_page()) {
 	$above_header_page = 'front';
@@ -65,7 +66,7 @@ else{
 <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'amaz-store' ); ?></a>
 <div id="page" class="amazstore-site <?php echo esc_attr($page_post_meta_sidebar);?>">
 	<div class="above-bg <?php echo esc_attr($above_header_page); ?>">
-		<div class="above-header-content">
+		<div class="above-header-content <?php echo esc_attr($offcanvas); ?>">
       		<div class="container">
 		<div class="top-header-bar thnk-col-3">
           <div class="top-header-col1"> 

@@ -28,6 +28,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 * Sidebar setting issue resolved.
 * Product list section style improved.
 * Above Header color updated.
+* Amaz Store Pro issues resolved.
 
 = 1.0.1 =
 * Style Issue Resolved.
@@ -43,6 +44,7 @@ Initial release
 * Sidebar setting issue resolved.
 * Product list section style improved.
 * Above Header color updated.
+* Amaz Store Pro issues resolved.
 
 == Resources ==
  
