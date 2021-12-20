@@ -164,12 +164,14 @@ else{
 	<?php }
 	elseif($amaz_store_inner_above_header_select  == 'innerpageslider'){ ?>
 	<div class="above-header-slides inner owl-carousel">
-		<?php amaz_store_above_header_slider('amaz_store_inner_above_header_slider', ''); ?>
+		<?php  $default_frontpage= amaz_store_Defaults_Models::instance()->get_frontpage_slider_default();
+    amaz_store_above_header_slider('amaz_store_inner_above_header_slider', $default); ?>
 	</div>
 	<?php }
 	elseif($amaz_store_inner_above_header_select  == 'homepageslider'){ ?>
 	<div class="above-header-slides inner owl-carousel">
-		<?php amaz_store_above_header_slider('amaz_store_front_above_header_slider', ''); ?>
+		<?php $default_innerpage= amaz_store_Defaults_Models::instance()->get_innerpage_slider_default();
+    amaz_store_above_header_slider('amaz_store_front_above_header_slider', $default_innerpage); ?>
 	</div>
 	<?php }  ?>
 	</div> 

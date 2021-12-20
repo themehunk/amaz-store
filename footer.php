@@ -16,6 +16,7 @@
 		      do_action( 'amaz_store_widget_footer' );
 		      // below-footer
           do_action( 'amaz_store_below_footer' );  
+          do_action( 'amaz_store_pro_below_footer' );  
           do_action( 'amaz_store_woo_cart' ); 
         ?>
      </footer> <!-- end footer -->

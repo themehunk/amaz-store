@@ -29,6 +29,8 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 * Product list section style improved.
 * Above Header color updated.
 * Amaz Store Pro issues resolved.
+* Footer Changed.
+* Repeater limit changed.
 
 = 1.0.1 =
 * Style Issue Resolved.
@@ -45,6 +47,8 @@ Initial release
 * Product list section style improved.
 * Above Header color updated.
 * Amaz Store Pro issues resolved.
+* Footer Changed.
+* Repeater limit changed.
 
 == Resources ==
  

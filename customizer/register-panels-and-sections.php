@@ -155,7 +155,7 @@ $amaz_store_shop_widget_footer = new  amaz_store_WP_Customize_Section($wp_custom
 $wp_customize->add_section( $amaz_store_shop_widget_footer);
 //Bottom footer
 $amaz_store_shop_bottom_footer = new  amaz_store_WP_Customize_Section($wp_customize,'amaz-store-bottom-footer', array(
-    'title'    => __('Below Footer','amaz-store'),
+    'title'    => __('Below Footer (Pro)','amaz-store'),
     'panel'    => 'amaz-store-panel-layout',
     'section'  => 'amaz-store-section-footer-group',
     'priority' => 5,
