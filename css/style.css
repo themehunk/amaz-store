@@ -6982,6 +6982,9 @@ margin-top:10px;
 .logged-in .sticky-header{
   top: 30px;
 }
+.sticky-header-bar .tooltiptext{
+  display: none;
+}
 /*search wrapper*/
 .search-wrapper{
     position: fixed;

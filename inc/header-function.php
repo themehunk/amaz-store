@@ -229,13 +229,10 @@ function amaz_store_header_icon(){
 ?>
 <div class="header-icon">
 <?php  
-amaz_store_account();
- if( class_exists( 'YITH_WCWL' )){?>
- <a class="whishlist" href="<?php echo esc_url( amaz_store_whishlist_url() ); ?>">
-        <i  class="fa fa-heart-o" aria-hidden="true"></i><span class="tooltiptext"><?php echo esc_html('Wishlist','amaz-store');?></span></a>
-      <?php } 
-       do_action( 'open_cart_count' );
-       // do_action( 'amaz_store_woo_cart' ); 
+amaz_store_account(); 
+amaz_store_whishlist_url();
+do_action( 'open_cart_count' );
+// do_action( 'amaz_store_woo_cart' ); 
       ?>
 </div>
 <?php } }
@@ -313,11 +310,8 @@ add_action('amaz_store_site_preloader','amaz_store_preloader');
                 <div class="header-icon">
                   <a class="prd-search" href="#"><i class="fa fa-search"></i></a>     
                      <?php 
-                    if( class_exists( 'YITH_WCWL' )){
-                      ?>
-                      <a class="whishlist" href="<?php echo esc_url( amaz_store_whishlist_url() ); ?>"><i  class="fa fa-heart-o" aria-hidden="true"></i></a>
-                     <?php } 
                      if(class_exists( 'WooCommerce' )){
+                        amaz_store_whishlist_url();
                         amaz_store_account();
                       }
                        ?>
@@ -359,16 +353,13 @@ function amazstore_mobile_navbar(){?>
   <ul>
     
     <li><a class="gethome" href="<?php echo esc_url( get_home_url() ); ?>"><i class="icon below fa fa-home" aria-hidden="true"></i></a></li>
-     <?php 
-    if( class_exists( 'YITH_WCWL' )){ ?>
-    <li><a class="whishlist" href="<?php echo esc_url( amaz_store_whishlist_url() ); ?>"><i  class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-    <?php } ?>
+    <li><?php amaz_store_whishlist_url(); ?>
+    </li>
     <li>
-            <a href="#" class="menu-btn" id="mob-menu-btn">           
-                <i class="icon fa fa-bars" aria-hidden="true"></i>             
-            </a>
- 
-       </li>
+      <a href="#" class="menu-btn" id="mob-menu-btn">           
+        <i class="icon fa fa-bars" aria-hidden="true"></i>      
+      </a>
+    </li>
     <li><?php amaz_store_account();?></li>
     <li><?php 
            do_action( 'open_cart_count' ); 

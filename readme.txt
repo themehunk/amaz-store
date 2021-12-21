@@ -31,6 +31,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 * Amaz Store Pro issues resolved.
 * Footer Changed.
 * Repeater limit changed.
+* Whislist and compare function changed.
 
 = 1.0.1 =
 * Style Issue Resolved.

@@ -118,9 +118,8 @@ else{
            <div class="header-support-wrap">
               <div class="header-support-icon">
 
-                 <?php if( get_theme_mod('amaz_store_whislist_mobile_disable',false) != true && class_exists( 'YITH_WCWL' )){?>
-                <a class="whishlist" href="<?php echo esc_url( amaz_store_whishlist_url() ); ?>">
-        <i  class="fa fa-heart-o" aria-hidden="true"></i><span><?php _e('Wishlist','amaz-store');?></span></a>
+                 <?php if( get_theme_mod('amaz_store_whislist_mobile_disable',false) != true){
+                  amaz_store_whishlist_url(); ?>       
       <?php } ?>
         
         <?php if(class_exists( 'WooCommerce' ) && get_theme_mod('amaz_store_account_mobile_disable',false) != true){ amaz_store_account(); } ?>
