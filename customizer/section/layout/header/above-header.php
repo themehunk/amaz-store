@@ -148,7 +148,7 @@ $wp_customize->add_control( 'amaz_store_above_hdr_btn_lnk', array(
             $wp_customize->add_setting(
              'amaz_store_front_above_header_slider', array(
              'sanitize_callback' => 'amaz_store_repeater_sanitize',  
-             'default'           => '',
+             'default'           => amaz_store_Defaults_Models::instance()->get_frontpage_slider_default(),
                 )
             );
             $wp_customize->add_control(

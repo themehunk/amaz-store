@@ -212,7 +212,8 @@ display:none;
     padding-bottom:10px;
     display: block;
 }
-#customize-control-amaz-typography-pro-link a{
+#customize-control-amaz-typography-pro-link a,
+#customize-control-amaz-footer-pro-link a{
   background: #008000;
     width: 100%;
     display: block;
@@ -242,4 +243,8 @@ display:none;
     padding: 5px;
     border-radius: 5px;
     margin-top: 9px;
+}
+#customize-control-amaz_store_main_header_layout.customize-control-radio-image .ui-state-active img{
+  border-color: #999;
+  box-shadow: 0 0 5px #999;
 }

@@ -55,6 +55,48 @@ public function get_brand_default() {
 		);
 	}
 
+/**
+	 * Get default values for Brands section.
+
+	 * @access public
+	 */
+public function get_frontpage_slider_default() {
+		return apply_filters(
+			'amaz_store_frontpage_slider_default_content', json_encode(
+				array(
+					array(
+						'image_url' => '',
+						'link'       => '#',
+					),
+					array(
+						'image_url' => '',
+						'link'       => '#',
+					),
+				)
+			)
+		);
+	}
+	/**
+	 * Get default values for Brands section.
+
+	 * @access public
+	 */
+public function get_innerpage_slider_default() {
+		return apply_filters(
+			'amaz_store_innerpage_slider_default_content', json_encode(
+				array(
+					array(
+						'image_url' => '',
+						'link'       => '#',
+					),
+					array(
+						'image_url' => '',
+						'link'       => '',
+					),
+				)
+			)
+		);
+	}
 
 	/**
 	 * Get default values for features section.

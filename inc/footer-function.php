@@ -223,43 +223,7 @@ $amaz_store_bottom_footer_widget_layout  = get_theme_mod( 'amaz_store_bottom_foo
 <?php }
 }
 add_action( 'amaz_store_widget_footer', 'amaz_store_widget_footer_markup' );
-/**************************************/
-//Below footer function
-/**************************************/
-if ( ! function_exists( 'amaz_store_below_footer_markup' ) ){  
-function amaz_store_below_footer_markup(){ ?>  
-<?php 
-$amaz_store_bottom_footer_layout  = get_theme_mod( 'amaz_store_bottom_footer_layout','ft-btm-one');
-$amaz_store_bottom_footer_col1_set= get_theme_mod( 'amaz_store_bottom_footer_col1_set','text');
-$amaz_store_bottom_footer_col2_set= get_theme_mod( 'amaz_store_bottom_footer_col2_set','text');
-$amaz_store_bottom_footer_col3_set= get_theme_mod( 'amaz_store_bottom_footer_col3_set','text');
-?>		
-<div class="below-footer">
-			<div class="container">
-				 <?php if($amaz_store_bottom_footer_layout=='ft-btm-one'):?>  
-				<div class="below-footer-bar thnk-col-1">
-					<div class="below-footer-col1"> 
-						<?php amaz_store_bottom_footer_conetnt_col1($amaz_store_bottom_footer_col1_set); ?>
-						</div>
-                </div>
-                 <?php elseif($amaz_store_bottom_footer_layout=='ft-btm-two'):?>
-                  <div class="below-footer-bar thnk-col-2">
-                   	<div class="below-footer-col1"> <?php amaz_store_bottom_footer_conetnt_col1($amaz_store_bottom_footer_col1_set); ?></div>
-					<div class="below-footer-col2"> <?php amaz_store_bottom_footer_conetnt_col2($amaz_store_bottom_footer_col2_set); ?></div>
-				</div>
-				<?php elseif($amaz_store_bottom_footer_layout=='ft-btm-three'):?>
-				<div class="below-footer-bar thnk-col-3">
-                   	<div class="below-footer-col1"> <?php amaz_store_bottom_footer_conetnt_col1($amaz_store_bottom_footer_col1_set); ?></div>
-					<div class="below-footer-col2"> <?php amaz_store_bottom_footer_conetnt_col2($amaz_store_bottom_footer_col2_set); ?></div>
-					<div class="below-footer-col3"> <?php amaz_store_bottom_footer_conetnt_col3($amaz_store_bottom_footer_col3_set); ?></div>
-				</div>
-			<?php endif; ?>
-				
-			</div>
-		</div>  
-<?php }
-}
-add_action( 'amaz_store_below_footer', 'amaz_store_below_footer_markup' );
+
 /**********************/
 // footer function
 /************************/

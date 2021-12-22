@@ -118,9 +118,8 @@ else{
            <div class="header-support-wrap">
               <div class="header-support-icon">
 
-                 <?php if( get_theme_mod('amaz_store_whislist_mobile_disable',false) != true && class_exists( 'YITH_WCWL' )){?>
-                <a class="whishlist" href="<?php echo esc_url( amaz_store_whishlist_url() ); ?>">
-        <i  class="fa fa-heart-o" aria-hidden="true"></i><span><?php _e('Wishlist','amaz-store');?></span></a>
+                 <?php if( get_theme_mod('amaz_store_whislist_mobile_disable',false) != true){
+                  amaz_store_whishlist_url(); ?>       
       <?php } ?>
         
         <?php if(class_exists( 'WooCommerce' ) && get_theme_mod('amaz_store_account_mobile_disable',false) != true){ amaz_store_account(); } ?>
@@ -164,12 +163,14 @@ else{
 	<?php }
 	elseif($amaz_store_inner_above_header_select  == 'innerpageslider'){ ?>
 	<div class="above-header-slides inner owl-carousel">
-		<?php amaz_store_above_header_slider('amaz_store_inner_above_header_slider', ''); ?>
+		<?php  $default_frontpage= amaz_store_Defaults_Models::instance()->get_frontpage_slider_default();
+    amaz_store_above_header_slider('amaz_store_inner_above_header_slider', $default); ?>
 	</div>
 	<?php }
 	elseif($amaz_store_inner_above_header_select  == 'homepageslider'){ ?>
 	<div class="above-header-slides inner owl-carousel">
-		<?php amaz_store_above_header_slider('amaz_store_front_above_header_slider', ''); ?>
+		<?php $default_innerpage= amaz_store_Defaults_Models::instance()->get_innerpage_slider_default();
+    amaz_store_above_header_slider('amaz_store_front_above_header_slider', $default_innerpage); ?>
 	</div>
 	<?php }  ?>
 	</div> 

@@ -317,14 +317,11 @@ class amaz_store_Repeater extends WP_Customize_Control {
 			}
 			?>
 			</div>
-			<?php if (!(defined('AMAZ_STORE_PRO'))) {
-			if ($_limit_the_repeater < 2) { ?>
-		<button type="button" class="button add_field customizer-repeater-new-field" <?php echo esc_attr($_repeater_disabled); ?>>
-			<?php echo esc_html( $this->add_field_label ); ?>
-			<input type="hidden" name="put-repeater-limit" value="<?php echo esc_attr($_limit_the_repeater); ?>" placeholder="<?php echo esc_html( $this->add_field_label ); ?>">
-		</button>
-		<p class="more-rptr"><?php echo _e('To get unlimited items Go to Pro','amaz-store'); ?></p>
-		<?php } } else{ ?>
+			<?php if (!(defined('AMAZ_STORE_PRO'))) { ?>
+				<p class="more-rptr"><?php echo _e('To get unlimited slides','amaz-store'); ?>
+					<a href="<?php echo esc_url('https://themehunk.com/product/amaz-store/'); ?>" target="_blank"><?php echo _e('Go to Pro','amaz-store'); ?></a>
+				</p>
+			<?php } else{ ?>
 		<button type="button" class="button add_field customizer-repeater-new-field" <?php echo esc_attr($_repeater_disabled); ?>>
 			<?php echo esc_html( $this->add_field_label ); ?>
 			<input type="hidden" name="put-repeater-limit" value="<?php echo esc_attr($_limit_the_repeater); ?>" placeholder="<?php echo esc_html( $this->add_field_label ); ?>">
