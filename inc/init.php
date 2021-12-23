@@ -40,6 +40,7 @@ get_template_part('customizer/sortable/class-open-control-sortable');
 get_template_part('customizer/background/class-amaz-store-background-image-control');
 get_template_part('customizer/customizer-tabs/class-amaz-store-customize-control-tabs');
 get_template_part('customizer/customizer-toggle/class-amaz-store-toggle-control');
+get_template_part('customizer/pro-button/class-customize');
 
 get_template_part('customizer/custom-customizer');
 get_template_part('customizer/customizer-constant');

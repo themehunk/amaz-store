@@ -118,7 +118,7 @@ else{
            <div class="header-support-wrap">
               <div class="header-support-icon">
 
-                 <?php if( get_theme_mod('amaz_store_whislist_mobile_disable',false) != true){
+                 <?php if( class_exists( 'WooCommerce' ) &&get_theme_mod('amaz_store_whislist_mobile_disable',false) != true){
                   amaz_store_whishlist_url(); ?>       
       <?php } ?>
         
