@@ -4894,7 +4894,8 @@ line-height: normal;
 }
 .woocommerce div.product .product_title, 
 .woocommerce div.product p.price,
-.woocommerce-product-details__short-description {
+.woocommerce-product-details__short-description,
+.single-product .in-stock {
   margin-bottom:20px;
   position: relative;
 }
@@ -8596,7 +8597,9 @@ a.add_to_wishlist span{
 #amazstore-mobile-bar .account .tooltiptext{
   display: none;
 }
-
+.woocommerce.single-product .sold-individually div.entry-summary form.cart button[type=submit]{
+  margin-bottom: 21px;
+}
 @media screen and (max-width: 1200px){
 /*hedaer*/
   .below-header-col2{
