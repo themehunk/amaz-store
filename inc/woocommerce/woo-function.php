@@ -384,11 +384,18 @@ function amaz_store_account(){
  // Plus Minus Quantity Buttons @ WooCommerce Single Product Page
 add_action( 'woocommerce_before_add_to_cart_quantity', 'amaz_store_display_quantity_minus',10,2 );
 function amaz_store_display_quantity_minus(){
+  global $product;
+  if($product->get_sold_individually()!='1'):
     echo '<div class="amaz-store-quantity"><button type="button" class="minus" >-</button>';
+  endif;
+  
 }
 add_action( 'woocommerce_after_add_to_cart_quantity', 'amaz_store_display_quantity_plus',10,2 );
 function amaz_store_display_quantity_plus(){
+  global $product;
+  if($product->get_sold_individually()!='1'):
     echo '<button type="button" class="plus" >+</button></div>';
+  endif;
 }
 
 //Woocommerce: How to remove page-title at the home/shop page but not category pages

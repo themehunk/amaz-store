@@ -87,16 +87,18 @@
 
          product_slide_margin_padding : function () {
             $(document).ready(function(){ 
-              $(".thunk-product").hover(function() { 
-                $('.thunk-slide .owl-stage-outer').css("margin", "-29px -6px -100px"); 
-                $('.thunk-slide .owl-stage-outer').css("padding", "29px 6px 100px");
-                $('.thunk-slide .owl-nav').css("top", "-41px");
-                $('.product-slide-widget .thunk-slide .owl-nav').css("top", "125px");
+              $(".thunk-product").hover(function() {
+               let outerStage = $(this).closest('.owl-stage-outer'); 
+                outerStage.css("margin", "-29px -6px -100px"); 
+                outerStage.css("padding", "29px 6px 100px");
+                $(this).closest('.owl-carousel').find('.owl-nav').css("top", "-41px");
+                // $(this).closest('.product-slide-widget .thunk-slide .owl-nav').css("top", "125px");
               }, function() { 
-                $('.thunk-slide .owl-stage-outer').css("margin", "0"); 
-                $('.thunk-slide .owl-stage-outer').css("padding", "0"); 
-                $('.thunk-slide .owl-nav').css("top", "-70px");
-                $('.product-slide-widget .thunk-slide .owl-nav').css("top", "119px");
+                let outerStage = $(this).closest('.owl-stage-outer'); 
+                outerStage.css("margin", "0"); 
+                outerStage.css("padding", "0"); 
+                $(this).closest('.owl-carousel').find('.owl-nav').css("top", "-70px");
+                // $('.product-slide-widget .thunk-slide .owl-nav').css("top", "119px");
              }); 
              });
 

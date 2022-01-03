@@ -311,16 +311,18 @@
                                });
                             $(".thunk-product-tab-section .thunk-loadContainer").css("display", "none");
                             $(".thunk-product").hover(function() { 
-                            $('.thunk-slide .owl-stage-outer').css("margin", "-29px -6px -100px"); 
-                            $('.thunk-slide .owl-stage-outer').css("padding", "29px 6px 100px");
-                            $('.thunk-slide .owl-nav').css("top", "-41px");
-                            $('.product-slide-widget .thunk-slide .owl-nav').css("top", "125px");
-                                      }, function() { 
-                            $('.thunk-slide .owl-stage-outer').css("margin", "0"); 
-                            $('.thunk-slide .owl-stage-outer').css("padding", "0"); 
-                            $('.thunk-slide .owl-nav').css("top", "-70px");
-                            $('.product-slide-widget .thunk-slide .owl-nav').css("top", "119px");
-                         }); 
+                            let outerStage = $(this).closest('.owl-stage-outer'); 
+                            outerStage.css("margin", "-29px -6px -100px"); 
+                            outerStage.css("padding", "29px 6px 100px");
+                            $(this).closest('.owl-carousel').find('.owl-nav').css("top", "-41px");
+                            // $(this).closest('.product-slide-widget .thunk-slide .owl-nav').css("top", "125px");
+                          }, function() { 
+                            let outerStage = $(this).closest('.owl-stage-outer'); 
+                            outerStage.css("margin", "-29px -6px -100px"); 
+                            outerStage.css("padding", "29px 6px 100px");
+                            $(this).closest('.owl-carousel').find('.owl-nav').css("top", "-70px");
+                          // $('.product-slide-widget .thunk-slide .owl-nav').css("top", "119px");
+                          }); 
                             $('li.thvs_loop-available-attributes__value').hover(function () {
                                var src = $(this).attr('data-o-src');
                                var id = $(this).attr('data-product-id');

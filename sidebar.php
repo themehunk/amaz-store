@@ -15,4 +15,4 @@ $sidebar = apply_filters( 'amaz_store_get_sidebar', 'sidebar-1' );
      }
       ?>
   </div>  <!-- sidebar-main End -->
-</div> <!-- sidebar-primary End -->                
+</div> <!-- sidebar-primary End -->         
