@@ -13,79 +13,6 @@ if ( ! function_exists( 'is_plugin_active' ) ){
   require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 }
 
-/*******************************/
-/** Sidebar Add Cart Product **/
-/*******************************/
-if ( ! function_exists( 'amaz_store_cart_total_item' ) ){
-  /**
-   * Cart Link
-   * Displayed a link to the cart including the number of items present and the cart total
-   */
- function amaz_store_cart_total_item(){
-   global $woocommerce; 
-   $product_no = WC()->cart->get_cart_contents_count();
-  ?>
- <a class="cart-contents" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart','amaz-store' ); ?>">
-  <i class="fa fa-shopping-cart"></i>
-  <span class="count-item"><?php echo WC()->cart->get_cart_contents_count();?></span>
-  <span class="cart-total"><?php echo WC()->cart->get_cart_total(); ?></span>
-</a>
-  <?php }
-}
-//cart view function
-function amaz_store_menu_cart_view($cart_view){
-	global $woocommerce;
-    $cart_view= amaz_store_cart_total_item();
-    return $cart_view;
-}
-add_action( 'open_cart_count','amaz_store_menu_cart_view');
-
-function amaz_store_woo_cart_product(){
-global $woocommerce;
-?>
-<div class="cart-overlay"></div>
-<div id="open-cart" class="open-cart">
-<div class="cart-widget-heading">
-  <h4><?php _e('Shopping Cart','amaz-store');?></h4>
-  <a class="cart-close-btn"><?php _e('close','amaz-store');?></a></div>  
-<div class="open-quickcart-dropdown">
-<?php 
-woocommerce_mini_cart(); 
-?>
-</div>
-<?php if ($woocommerce->cart->is_empty() ) : ?>
-<a class="button return wc-backward" href="<?php echo esc_url( wc_get_page_permalink( 'shop' ) ); ?>"> <?php _e( 'Return to shop', 'amaz-store' ); ?> </a>
-<?php endif;?>
-</div>
-    <?php
-}
-add_action( 'amaz_store_woo_cart', 'amaz_store_woo_cart_product' );
-add_filter('woocommerce_add_to_cart_fragments', 'amaz_store_add_to_cart_dropdown_fragment');
-function amaz_store_add_to_cart_dropdown_fragment( $fragments ){
-   global $woocommerce;
-   ob_start();
-   ?>
-   <div class="open-quickcart-dropdown">
-       <?php woocommerce_mini_cart(); ?>
-   </div>
-   <?php $fragments['div.open-quickcart-dropdown'] = ob_get_clean();
-   return $fragments;
-}
-add_filter('woocommerce_add_to_cart_fragments', 'amaz_store_add_to_cart_fragment');
-function amaz_store_add_to_cart_fragment($fragments) {
-        ob_start();
-        $product_no = WC()->cart->get_cart_contents_count(); ?>
-
-        <a class="cart-contents" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart','amaz-store' ); ?>">
-         <i class="fa fa-shopping-cart"></i>
-          <span class="count-item"><?php echo WC()->cart->get_cart_contents_count();?></span>
-          <span class="cart-total"><?php echo WC()->cart->get_cart_total(); ?></span>
-        </a>
-
-       <?php  $fragments['a.cart-contents'] = ob_get_clean();
-
-        return $fragments;
-    }
 /***********************************************/
 //Sort section Woocommerce category filter show
 /***********************************************/
@@ -341,11 +268,15 @@ if (!function_exists('amaz_store_add_to_compare_fltr')) {
 function amaz_store_add_to_compare_fltr($pid = ''){
   global $product;
       $product_id = $pid;
-        if( is_plugin_active('yith-woocommerce-compare/init.php') ){
-          echo '<div class="thunk-compare"><span class="compare-list"><div class="woocommerce product compare-button"><a href="'.esc_url(home_url()).'?action=yith-woocompare-add-product&id='.esc_attr($product_id).'" class="compare button" data-product_id="'.esc_attr($product_id).'" rel="nofollow">'.__('Compare','amaz-store').'</a></div></span></div>';
+        if(class_exists(('th_product_compare') )){
+    echo '<div class="thunk-compare"><span class="compare-list"><div class="woocommerce product compare-button">
+          <a class="th-product-compare-btn compare button" data-th-product-id="'.$pid.'"></a>
+          </div></span></div>';
 
            }
         }
+
+       
 }
 /**********************/
 /** wishlist **/

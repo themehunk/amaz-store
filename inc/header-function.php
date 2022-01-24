@@ -90,7 +90,7 @@ $offcanvas = get_theme_mod('amaz_store_canvas_alignment','cnv-none');
              </div><!-- menu-category-list -->    
           <div class="main-header-col1">
             <div class="header-icon-column">
-              <?php  amaz_store_header_icon();  ?>       
+              <?php amaz_store_header_icon();  ?>       
            </div>
          </div>
          <?php }?>
@@ -136,12 +136,12 @@ $offcanvas = get_theme_mod('amaz_store_canvas_alignment','cnv-none');
 			</div>
 		</div> 
        <div class="search-wrapper">
-                     <div class="container">
+                    <div class="container">
                       <div class="search-close"><a class="search-close-btn"></a></div>
                      <?php  if ( class_exists( 'WooCommerce' ) ){
                               amaz_store_product_search_box();
                           } ?>
-                       </div>
+                    </div>
        </div> 
 <?php	}
 }
@@ -230,10 +230,8 @@ function amaz_store_header_icon(){
 <div class="header-icon">
 <?php  
 amaz_store_account(); 
-amaz_store_whishlist_url();
-do_action( 'open_cart_count' );
-// do_action( 'amaz_store_woo_cart' ); 
-      ?>
+amaz_store_whishlist_url(); 
+?>
 </div>
 <?php } }
 
@@ -319,7 +317,13 @@ add_action('amaz_store_site_preloader','amaz_store_preloader');
              <?php if(class_exists( 'WooCommerce' )){ ?>
                       <div class="cart-icon" > 
                          <?php 
-                         do_action( 'open_cart_count' );
+
+                         if ( shortcode_exists('taiowc') ){
+
+                                echo do_shortcode('[taiowc]');
+
+                              }
+
                          ?>
                        </div>
                       <?php  } ?> 
@@ -361,10 +365,7 @@ function amazstore_mobile_navbar(){?>
       </a>
     </li>
     <li><?php amaz_store_account();?></li>
-    <li><?php 
-           do_action( 'open_cart_count' ); 
-        ?> 
-    </li>
+    
     
   </ul>
 </div>

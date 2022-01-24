@@ -83,8 +83,13 @@ else{
           <div class="top-header-col3">
           	<?php amaz_store_top_header_conetnt_col3($amaz_store_above_header_col3_set,$amaz_store_menu_open);
           	if (class_exists('WooCommerce')) {
-            amaz_store_cart_total_item(); 
-          }
+
+                            if ( shortcode_exists('taiowc') ){
+
+                                echo do_shortcode('[taiowc]');
+
+                            } 
+                    }
              ?>
           </div>
         </div>
@@ -128,24 +133,27 @@ else{
               <div class="thunk-icon">
              
                 <?php if(class_exists( 'WooCommerce' )){ 
+
                   if(get_theme_mod('amaz_store_cart_mobile_disable')==true){
-                         if (wp_is_mobile()!== true):
+
+                     if (wp_is_mobile()!== true):
                           
                       ?>
                       <div class="cart-icon" > 
-                         <?php 
-                         do_action( 'open_cart_count' );
-                         ?>
+
+                        <?php 
+                         if ( shortcode_exists('taiowc') ){
+
+                                echo do_shortcode('[taiowc]');
+
+                            } ?>
+
                        </div>
+
                       <?php  endif; }
-                      elseif(get_theme_mod('amaz_store_cart_mobile_disable')==false){?>
-                           <div class="cart-icon" > 
-                            <?php 
-                               do_action( 'open_cart_count' );
-                               
-                               ?>
-                          </div>
-                     <?php  } } ?>  
+
+                     } ?>  
+                     
                   </div>   
              
           </div>

@@ -113,6 +113,11 @@ define( 'AMAZ_STORE_THEME_SETTINGS', 'amaz-store-settings' );
             'img' => 'icon-128x128.gif',
             'active_filename' => 'th-advance-product-search/th-advance-product-search.php',
             ),
+            'th-all-in-one-woo-cart' => array(
+                 'name' => esc_html__( 'TH All In One Woo Cart', 'amaz-store' ),
+                  'img' => 'icon-128x128.png',
+                 'active_filename' => 'th-all-in-one-woo-cart/th-all-in-one-woo-cart.php',
+             ),
             'th-variation-swatches' => array(
                 'name' => esc_html__( 'TH Variation Swatches', 'amaz-store' ),
                  'img' => 'icon-128x128.gif',
@@ -133,17 +138,18 @@ define( 'AMAZ_STORE_THEME_SETTINGS', 'amaz-store-settings' );
                  'img' => 'icon-128x128.png',
                 'active_filename' => 'woocommerce/woocommerce.php',
             ),
+            'th-product-compare' => array(
+                 'name' => esc_html__( 'TH Product Compare', 'amaz-store' ),
+                  'img' => 'icon-128x128.png',
+                 'active_filename' => 'th-product-compare/th-product-compare.php',
+             ),
 
             'yith-woocommerce-wishlist' => array(
                  'name' => esc_html__( 'YITH WooCommerce Wishlist', 'amaz-store' ),
                   'img' => 'icon-128x128.jpg',
                  'active_filename' => 'yith-woocommerce-wishlist/init.php',
              ),
-            'yith-woocommerce-compare' => array(
-                 'name' => esc_html__( 'YITH WooCommerce Compare', 'amaz-store' ),
-                  'img' => 'icon-128x128.jpg',
-                 'active_filename' => 'yith-woocommerce-compare/init.php',
-             ),
+            
             
 
         ) );
@@ -166,6 +172,17 @@ define( 'AMAZ_STORE_THEME_SETTINGS', 'amaz-store-settings' );
                 'img' => 'icon-128x128.png',
                 'active_filename' => 'woocommerce/woocommerce.php',
             ),
+            'th-advance-product-search' => array(
+            'name' => esc_html__( 'TH Advance Product Search', 'amaz-store' ),
+            'img' => 'icon-128x128.gif',
+            'active_filename' => 'th-advance-product-search/th-advance-product-search.php',
+            ),
+
+            'th-all-in-one-woo-cart' => array(
+                 'name' => esc_html__( 'TH All In One Woo Cart', 'amaz-store' ),
+                  'img' => 'icon-128x128.png',
+                 'active_filename' => 'th-all-in-one-woo-cart/th-all-in-one-woo-cart.php',
+             ),
 
         ));
 
@@ -377,3 +394,5 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 		do_action( 'wp_body_open' );
 	}
 }
+//for shop page
+remove_action('woocommerce_init','th_compare_add_action_shop_list');

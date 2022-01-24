@@ -8600,6 +8600,68 @@ a.add_to_wishlist span{
 .woocommerce.single-product .sold-individually div.entry-summary form.cart button[type=submit]{
   margin-bottom: 21px;
 }
+.above-header-content .taiowc-icon svg,.above-header-content .taiowc-content .taiowc-total {
+fill: #fff;
+color:#fff
+}
+.above-header-content .cart-count-item{
+display:none;
+}
+.above-header-content .taiowc-cart-item {
+    padding: 0.2rem 0.6rem;
+}
+.above-header-content .taiowc-wrap{
+margin-left:1rem
+}
+.th-product-compare-btn.loading:after {
+    content: "";
+    display: block;
+    width: 16px!important;
+    height: 16px!important;
+    position: absolute;
+    left: 20%!important;
+    top: 20%!important;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 3px solid #436eee;
+    border-top-color: white;
+    animation: loaderTMKWithCenter 0.8s linear 0s infinite forwards;
+}
+/*compare plugin in single page*/
+.thunk-single-product-summary-wrap .th-product-compare-btn-wrap{
+margin-right:14px;
+float:left;
+}
+
+.thunk-single-product-summary-wrap a.th-product-compare-btn{
+    border: 1px solid!important;
+    border-radius: 0;
+    color: #9c9c9c!important;
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    width: 45px;
+    text-align:center;
+    letter-spacing: normal;
+    font-size:0;
+    background:transparent!important;
+
+}
+.thunk-single-product-summary-wrap a.th-product-compare-btn.th-added-compare{
+color:#ff3377!important;
+}
+.thunk-single-product-summary-wrap a.th-product-compare-btn:before {
+    content: "\f021";
+    font-family: 'fontawesome';
+   font-size: 13px;
+}
+
+.thunk-single-product-summary-wrap a.th-product-compare-btn.loading:after {
+    left: 28%!important;
+    top: 28%!important;
+  }
+
+
 @media screen and (max-width: 1200px){
 /*hedaer*/
   .below-header-col2{
@@ -8948,7 +9010,7 @@ margin-right:0;
 }
 .summary .yith-wcwl-add-button a, .summary .yith-wcwl-wishlistaddedbrowse a, 
 .summary .yith-wcwl-wishlistexistsbrowse a, 
-.woocommerce .entry-summary a.compare.button{
+.woocommerce .entry-summary a.compare.button,.thunk-single-product-summary-wrap a.th-product-compare-btn{
   width: 35px;
   height: 35px;
   line-height: 35px;
@@ -10219,8 +10281,15 @@ font-size:13px
 line-height: 30px;
 min-width:70px;
 }
+.thunk-single-product-summary-wrap .th-product-compare-btn-wrap {
+    margin-right: 8px;
+}
 
-.summary .yith-wcwl-add-button a, .summary .yith-wcwl-wishlistaddedbrowse a, .summary .yith-wcwl-wishlistexistsbrowse a,.woocommerce .entry-summary a.compare.button {
+.summary .yith-wcwl-add-button a,
+ .summary .yith-wcwl-wishlistaddedbrowse a,
+  .summary .yith-wcwl-wishlistexistsbrowse a,
+  .woocommerce .entry-summary a.compare.button,
+  .thunk-single-product-summary-wrap a.th-product-compare-btn {
     height: 30px;
     line-height: 30px;
     width: 30px;

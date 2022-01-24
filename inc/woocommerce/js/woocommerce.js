@@ -16,7 +16,6 @@
             $this.ProductSlide();
             $this.ProductListSlide();
             $this.CategorySlider();
-            $this.cartopen();
             $this.woccomerce_tab();
           },
           woccomerce_tab: function (){
@@ -170,30 +169,6 @@
 
         },
 
- cartopen: function(){
-            $(document).on('click','a.cart-contents',function(e){
-            e.preventDefault();
-            $('body').toggleClass('cart-pan-active');
-            $('.cart-overlay').toggleClass('open');
-            });
-
-            $('.cart-close-btn').click(function (e){
-                $('body').removeClass('cart-pan-active');
-                $('.cart-overlay').removeClass('open');
-            });
-
-             $('body').click(function(evt){    
-                if(evt.target.class == ".open-cart")
-                  return;
-                if($(evt.target).closest('.open-cart').length)
-                  return;             
-                  $('body').removeClass('cart-pan-active'); 
-                  $('.cart-overlay').removeClass('open');
-        
-            });
-
-
-        },
 /***********************/        
 // Front Page Function
 /***********************/  
