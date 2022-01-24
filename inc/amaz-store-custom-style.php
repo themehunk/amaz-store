@@ -64,7 +64,7 @@ if (get_theme_mod('amaz_store_bottom_footer_layout','ft-btm-none') != 'ft-btm-no
     border-left: 4px solid {$amaz_store_theme_clr};}
     .woocommerce .thunk-product-image-cat-slide .thunk-woo-product-list:hover .thunk-product,.woocommerce .thunk-product-image-cat-slide .thunk-woo-product-list:hover .thunk-product,[type='submit']{border-color:{$amaz_store_theme_clr}} .amaz-store-off-canvas-sidebar-wrapper .menu-close-btn:hover,.main-header .cart-close-btn:hover{color:{$amaz_store_theme_clr};}";
 
-    $amaz_store_style.=".woocommerce .thunk-product-hover .thunk-wishlist a.add_to_wishlist:hover, .thunk-wishlist .yith-wcwl-wishlistaddedbrowse, .thunk-wishlist .yith-wcwl-wishlistexistsbrowse, .thunk-compare .compare-button a.compare.button:hover,.thunk-product-hover .thunk-quickview a:hover,.thunk-cat-tab .tab-link li a.active, .thunk-cat-tab .tab-link li a:hover{color:{$amaz_store_theme_clr};}";
+    $amaz_store_style.=".woocommerce .thunk-product-hover .thunk-wishlist a.add_to_wishlist:hover, .thunk-wishlist .yith-wcwl-wishlistaddedbrowse, .thunk-wishlist .yith-wcwl-wishlistexistsbrowse, .thunk-compare .compare-button a.compare.button:hover,.thunk-product-hover .thunk-quickview a:hover,.thunk-cat-tab .tab-link li a.active, .thunk-cat-tab .tab-link li a:hover{color:{$amaz_store_theme_clr};} .thunk-single-product-summary-wrap a.th-product-compare-btn.th-added-compare{color:{$amaz_store_theme_clr}!important}";
 
    //text
    $amaz_store_text_clr = esc_html(get_theme_mod('amaz_store_text_clr'));
