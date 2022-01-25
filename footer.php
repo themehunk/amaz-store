@@ -15,8 +15,13 @@
           // widget-footer
 		      do_action( 'amaz_store_widget_footer' );
 		      // below-footer
-          do_action( 'amaz_store_below_footer' );  
-          do_action( 'amaz_store_pro_below_footer' );  
+          if (function_exists( 'amaz_store_pro_load_plugin' ) ){
+             do_action( 'amaz_store_pro_below_footer' );  
+          }
+          else{
+            do_action( 'amaz_store_default_bottom_footer' );  
+          }
+         
           do_action( 'amaz_store_woo_cart' ); 
         ?>
      </footer> <!-- end footer -->

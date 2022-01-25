@@ -4,7 +4,7 @@ Tags: e-commerce, blog, grid-layout, one-column, two-columns, three-columns, fou
 Requires at least: WordPress 5.3
 Requires PHP: 5.4
 Tested up to: 5.8
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -23,6 +23,11 @@ Yes our theme supports builder
 Yes, this theme is tested with latest version of WordPress, you can use it for your site.
 
 == Changelog ==
+= 1.0.7 =
+* Sticky header issue resolved.
+* Copyright Footer added in theme.
+* Taiowc icon style issue in header resolved.
+
 = 1.0.6 =
 * Inegarte TH Product Compare and TH All In One Woo Cart Plugin.
 
