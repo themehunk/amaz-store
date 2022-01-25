@@ -134,9 +134,9 @@ else{
              
                 <?php if(class_exists( 'WooCommerce' )){ 
 
-                  if(get_theme_mod('amaz_store_cart_mobile_disable')==true){
+                  if(get_theme_mod('amaz_store_cart_mobile_disable',false)==false){
 
-                     if (wp_is_mobile()!== true):
+                     if (wp_is_mobile() == true):
                           
                       ?>
                       <div class="cart-icon" > 
