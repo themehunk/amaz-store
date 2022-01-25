@@ -7028,7 +7028,7 @@ width:100%;
 }
 .search-close{
 float:right;
-margin-bottom:25px
+margin-top:18px
 }
 .search-close-btn {
     display: block;
@@ -8600,19 +8600,31 @@ a.add_to_wishlist span{
 .woocommerce.single-product .sold-individually div.entry-summary form.cart button[type=submit]{
   margin-bottom: 21px;
 }
-.above-header-content .taiowc-icon svg,.above-header-content .taiowc-content .taiowc-total {
+
+
+
+
+.above-header-content .taiowc-icon svg,
+.above-header-content .taiowc-content .taiowc-total {
 fill: #fff;
 color:#fff
 }
-.above-header-content .cart-count-item{
+
+.above-header-content .cart-count-item,
+.sticky-header .cart-count-item{
 display:none;
 }
-.above-header-content .taiowc-cart-item {
+
+.above-header-content .taiowc-cart-item,
+.sticky-header .taiowc-cart-item {
     padding: 0.2rem 0.6rem;
 }
-.above-header-content .taiowc-wrap{
+
+.above-header-content .taiowc-wrap,
+.sticky-header .taiowc-wrap{
 margin-left:1rem
 }
+
 .th-product-compare-btn.loading:after {
     content: "";
     display: block;
@@ -8627,6 +8639,7 @@ margin-left:1rem
     border-top-color: white;
     animation: loaderTMKWithCenter 0.8s linear 0s infinite forwards;
 }
+
 /*compare plugin in single page*/
 .thunk-single-product-summary-wrap .th-product-compare-btn-wrap{
 margin-right:14px;

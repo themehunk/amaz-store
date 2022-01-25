@@ -212,7 +212,7 @@ if( $description || is_customize_preview() ):?>
 /***************************/
 function amaz_store_product_search_box(){  
     if (shortcode_exists( 'th-aps' )) {
-    echo do_shortcode('[th-aps layout="icon_style"]');          
+    echo do_shortcode('[th-aps]');          
   }        
 }
 
@@ -309,6 +309,7 @@ add_action('amaz_store_site_preloader','amaz_store_preloader');
                   <a class="prd-search" href="#"><i class="fa fa-search"></i></a>     
                      <?php 
                      if(class_exists( 'WooCommerce' )){
+
                         amaz_store_whishlist_url();
                         amaz_store_account();
                       }
