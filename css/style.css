@@ -5446,6 +5446,7 @@ clear: initial;
     position: relative;
     text-align: center;
     font-size: 0;
+    border: 0;
 }
 .summary .yith-wcwl-add-button .show {
     display: block!important;
@@ -10649,9 +10650,10 @@ width:50%;
 .page-template-frontpage .slide-layout-1 .owl-carousel button.owl-dot.active{
   width: 12px;
 }
+.woocommerce .thunk-woo-product-list .price,
 .woocommerce ul.products li.product.thunk-woo-product-list .price,
  .woocommerce .thunk-list-view ul.products li.product.thunk-woo-product-list .price {
-    font-size: 21px;
+    font-size: 14px;
     padding: 0;
 }
 .thunk-list-view .os-product-excerpt{
