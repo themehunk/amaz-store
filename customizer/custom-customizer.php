@@ -454,7 +454,7 @@ class amaz_store_Widegt_Redirect extends WP_Customize_Control {
         if ( ! empty( $this->button_text ) ) {
             echo '<button type="button" class="button menu-shortcut ' . esc_attr( $this->button_class ) . '" tabindex="0">';
             if ( ! empty( $this->button_class ) ) {
-                echo '<span class="dashicons dashicons-admin-generic" style="margin-right: 10px;margin-top:3PX;
+                echo '<span class="dashicons dashicons-admin-generic" style="margin-right: 10px;margin-top:3px;
     color:#999;"></span>';
             }
                 echo esc_html( $this->button_text );
