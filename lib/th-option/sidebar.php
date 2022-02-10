@@ -4,9 +4,8 @@
                 <span><?php _e('Amaz Store Pro WordPress Theme','amaz-store'); ?> </span>
             </h3>
             <p>
-            <b><?php _e('Pre-made premium templates','amaz-store'); ?> </b><br>
-            <?php _e('Amaz Store Pro is one of the most popular eCommerce theme on WordPress.','amaz-store'); ?> </p>
-                <center><a class="button ztabtn" target="_blank" href="https://themehunk.com/product/amaz-store/"><?php _e('Upgrade','amaz-store'); ?> </a></center>
+            <?php _e('If you like the free version of this theme, you will LOVE the full version of Amaz Store which includes numerous  Advanced features, Custom Sections, Section Ordering and more useful options to customize your website.','amaz-store'); ?> </p>
+                <center><a class="button ztabtn" target="_blank" href="https://themehunk.com/product/amaz-store/"><?php _e('Upgrade To Amaz Store Premium','amaz-store'); ?> </a></center>
             </div>
             <hr>
             <div class="section">
