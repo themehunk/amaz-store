@@ -4,7 +4,7 @@ Tags: e-commerce, blog, grid-layout, one-column, two-columns, three-columns, fou
 Requires at least: WordPress 5.3
 Requires PHP: 5.4
 Tested up to: 5.9
-Stable tag: 1.0.9
+Stable tag: 1.0.8
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -23,12 +23,11 @@ Yes our theme supports builder
 Yes, this theme is tested with latest version of WordPress, you can use it for your site.
 
 == Changelog ==
-= 1.0.9 =
-* New Layout Addd in header
 
 = 1.0.8 =
 * Custom add to cart link improved.
 * Catlog Product link improved.
+* New Layout Added in header.
 
 = 1.0.7 =
 * Sticky header issue resolved.
@@ -67,8 +66,10 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 Initial release
 
 == Upgrade Notice ==
-= 1.0.5 =
-* Product Hover Effect optimised in js.
+= 1.0.8 =
+* Custom add to cart link improved.
+* Catlog Product link improved.
+* New Layout Added in header.
 
 == Resources ==
  
