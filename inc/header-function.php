@@ -74,7 +74,9 @@ $offcanvas = get_theme_mod('amaz_store_canvas_alignment','cnv-none');
 			<div class="container">
         <div class="desktop-main-header">
 				<div class="main-header-bar thnk-col-3">
-          <?php if ( class_exists( 'WooCommerce' ) ){ ?>
+          <?php if ($main_header_layout == 'mhdrthree') {
+            
+            if ( class_exists( 'WooCommerce' ) ){ ?>
             <div class="menu-category-list toogleclose">
               <div class="toggle-cat-wrap">
                   <p class="cat-toggle" tabindex="0">
@@ -128,7 +130,67 @@ $offcanvas = get_theme_mod('amaz_store_canvas_alignment','cnv-none');
       <div class="main-header-col3">
         <?php echo amaz_store_main_header_optn(); ?>
       </div>
-       
+       <?php }
+       elseif($main_header_layout == 'mhdrfour'){
+        if ( class_exists( 'WooCommerce' ) ){ ?>
+        <div class="menu-category-list toogleclose">
+              <div class="toggle-cat-wrap">
+                  <p class="cat-toggle" tabindex="0">
+                    <span class="cat-icon"> 
+                      <span class="cat-top"></span>
+                       <span class="cat-mid"></span>
+                       <span class="cat-bot"></span>
+                     </span>
+                    
+                  </p>
+              </div>
+              <?php amaz_store_product_list_categories(); ?>
+             </div><!-- menu-category-list --> 
+           <?php  } ?>
+           <div class="main-header-col1">
+             <nav>
+        <!-- Menu Toggle btn-->
+       <!-- Menu Toggle btn-->
+        <div class="menu-toggle">
+            <button type="button" class="menu-btn" id="menu-btn">
+                <div class="btn">
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </div>
+            </button>
+        </div>
+        <div class="sider-inner">
+          <?php if(has_nav_menu('amaz-store-main-menu' )){ 
+              if (wp_is_mobile()!== true){
+                    if(has_nav_menu('amaz-store-above-menu' )){
+                                amaz_store_abv_nav_menu();
+                       }
+                    }  
+                   amaz_store_main_nav_menu();
+              }else{
+                 wp_page_menu(array( 
+                 'items_wrap'  => '<ul class="amaz-store-menu" data-menu-style="horizontal">%3$s</ul>',
+                 'link_before' => '<span>',
+                 'link_after'  => '</span>'));
+             }?>
+        </div>
+        </nav>
+         </div> 
+
+         <div class="main-header-col2"> 
+           <?php echo amaz_store_main_header_optn(); ?>        
+          </div>
+
+          <div class="main-header-col3">
+            <div class="header-icon-column">
+              <?php amaz_store_header_icon();
+
+               ?>       
+           </div>
+        </div>
+
+      <?php } ?>
         </div> <!-- end main-header-bar -->
       </div>
         <!-- end main-header-bar -->

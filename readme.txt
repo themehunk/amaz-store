@@ -27,6 +27,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 = 1.0.8 =
 * Custom add to cart link improved.
 * Catlog Product link improved.
+* New Layout Added in header.
 
 = 1.0.7 =
 * Sticky header issue resolved.
@@ -65,8 +66,10 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 Initial release
 
 == Upgrade Notice ==
-= 1.0.5 =
-* Product Hover Effect optimised in js.
+= 1.0.8 =
+* Custom add to cart link improved.
+* Catlog Product link improved.
+* New Layout Added in header.
 
 == Resources ==
  

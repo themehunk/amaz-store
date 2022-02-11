@@ -653,6 +653,9 @@ $amaz_store_color_scheme = get_theme_mod( 'amaz_store_color_scheme','opn-light' 
 if (get_theme_mod( 'amaz_store_main_header_layout','mhdrthree' ) == 'mhdrtwo') {
 $classes[] = 'th-boxed-layout';
 }
+if (get_theme_mod( 'amaz_store_main_header_layout','mhdrthree' ) == 'mhdrfour') {
+$classes[] = 'mhdrfour';
+}
 return $classes;
 }
 add_filter( 'body_class', 'amaz_store_body_classes' );

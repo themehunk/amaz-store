@@ -1259,7 +1259,35 @@ padding: 20px 0 20px 20px;
 .below-header.mhdrone .cat-icon{
   order: 3;
 }
-/*****************/
+.mhdrfour .desktop-main-header .main-header-col1{
+  width: auto;
+  position: relative;
+  z-index: initial;
+  top: initial;
+  bottom: initial;
+  top: initial;
+}
+.mhdrfour .desktop-main-header .header-icon-column .header-icon{
+  flex-direction: row;
+}
+.mhdrfour .desktop-main-header .header-icon-column .header-icon a{
+  padding: 0 0 0 21px;
+}
+.mhdrfour .desktop-main-header .main-header-col2{
+  flex-grow: initial;
+}
+.mhdrfour .desktop-main-header .main-header-col3{
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 2;
+}
+.mhdrfour .desktop-main-header .main-header-bar{
+  flex-wrap: initial;
+}
+.mhdrfour .container > .content-wrap{
+  padding-left: 0;
+}
+/****************
 /*Menu Alignment*/
 /*****************/
 .left .main-header-col2{
@@ -8756,6 +8784,10 @@ nav .sider-inner{
 }
 .main-header-col2{
   flex-grow: 2;
+}
+.mhdrfour .desktop-main-header .main-header-col2 {
+  width: initial;
+  padding-left: 21px;
 }
 .desktop-main-header .main-header-col2{
   width: 80px;
