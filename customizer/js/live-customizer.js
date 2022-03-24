@@ -534,25 +534,25 @@ wp.customize('amaz_store_ribbon_btn_text', function(value){
 //Custom section One
 wp.customize('amaz_store_custom_1_heading', function(value){
          value.bind(function(to) {
-             $('.thunk-custom-one-section .thunk-title .title').text(to);
+             $('.thunk-custom-one-section > .thunk-heading-wrap .thunk-title .title').text(to);
          });
      });
 //Custom section two
 wp.customize('amaz_store_custom_2_heading', function(value){
          value.bind(function(to) {
-             $('.thunk-custom-two-section .thunk-title .title').text(to);
+             $('.thunk-custom-two-section > .thunk-heading-wrap .thunk-title .title').text(to);
          });
      });
 //Custom section three
 wp.customize('amaz_store_custom_3_heading', function(value){
          value.bind(function(to) {
-             $('.thunk-custom-three-section .thunk-title .title').text(to);
+             $('.thunk-custom-three-section > .thunk-heading-wrap .thunk-title .title').text(to);
          });
      });
 //Custom section four
 wp.customize('amaz_store_custom_4_heading', function(value){
          value.bind(function(to){
-             $('.thunk-custom-four-section .thunk-title .title').text(to);
+             $('.thunk-custom-four-section > .thunk-heading-wrap .thunk-title .title').text(to);
          });
      });
 //Inner Page Header

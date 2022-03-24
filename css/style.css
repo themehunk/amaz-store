@@ -6669,6 +6669,7 @@ padding:5px;
 }   
 .content-social ul.social-icon li i{
   padding:0;
+  font-family: 'FontAwesome';
 }
 .social-icon.original-social-icon i.fa-facebook{
 color:#4867AA;
@@ -7238,7 +7239,7 @@ padding:0
     background-color: #ff3377;
     font-size:18px;
     right: 30px;
-    bottom: 30px;
+    bottom: 108px;
     position: fixed;
     text-align: center;
     cursor: pointer;
@@ -8733,7 +8734,23 @@ color:#ff3377!important;
     top: 28%!important;
   }
 
-
+.top-header-bar .taiowc-icon .th-icon{
+  color: #FFF;
+}
+.theme-amaz-store i{
+ font-family: 'FontAwesome';
+}
+/* Dokan Plugin Css  */
+.woocommerce.single-product .summary .woocommerce-tabs .more_seller_product_tab{
+  display: none!important;
+}
+.primary-content-area .dokan-store-products-filter-area .orderby-search{
+  margin-top: 21px;
+}
+.primary-content-area .dokan-pagination-container .dokan-pagination li a{
+  padding: 15px 21px;
+}
+/* Dokan Plugin Css  */
 @media screen and (max-width: 1200px){
 /*hedaer*/
   .below-header-col2{
