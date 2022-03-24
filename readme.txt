@@ -24,7 +24,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 == Changelog ==
 = 1.0.9 =
-* Theme made compatible with doka plugin.
+* Theme made compatible with dokan plugin.
 
 = 1.0.8 =
 * Custom add to cart link improved.
@@ -69,7 +69,7 @@ Initial release
 
 == Upgrade Notice ==
 = 1.0.9 =
-* Theme made compatible with doka plugin.
+* Theme made compatible with dokan plugin.
 
 == Resources ==
  
