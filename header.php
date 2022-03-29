@@ -76,19 +76,13 @@ else{
            <?php if(function_exists('amaz_store_show_off_canvas_sidebar_icon')){amaz_store_show_off_canvas_sidebar_icon();} ?>
           </div>
           <div class="top-header-col2">
-          	<?php if (shortcode_exists( 'th-aps' )) {
-			    echo do_shortcode('[th-aps]');          
-			  }  ?>
+          	<?php amaz_store_product_search_box(); ?>
           </div>
           <div class="top-header-col3">
           	<?php amaz_store_top_header_conetnt_col3($amaz_store_above_header_col3_set,$amaz_store_menu_open);
           	if (class_exists('WooCommerce')) {
 
-                            if ( shortcode_exists('taiowc') ){
-
-                                echo do_shortcode('[taiowc]');
-
-                            } 
+                            amaz_store_product_cart();
                     }
              ?>
           </div>
@@ -105,7 +99,7 @@ else{
 
            <div class="main-header-col2">
             <?php if ( class_exists( 'WooCommerce' ) ){
-              amaz_store_product_search_box_mobile();
+              amaz_store_product_search_box();
              } ?>
            </div>
 
@@ -130,31 +124,32 @@ else{
         <?php if(class_exists( 'WooCommerce' ) && get_theme_mod('amaz_store_account_mobile_disable',false) != true){ amaz_store_account(); } ?>
                
               </div>
-              <div class="thunk-icon">
+              
              
                 <?php if(class_exists( 'WooCommerce' )){ 
 
                   if(get_theme_mod('amaz_store_cart_mobile_disable',false)==false){
 
-                     if (wp_is_mobile() == true):
+                    
                           
                       ?>
+                      <div class="thunk-icon">
                       <div class="cart-icon" > 
 
                         <?php 
-                         if ( shortcode_exists('taiowc') ){
 
-                                echo do_shortcode('[taiowc]');
+                         amaz_store_product_cart();
 
-                            } ?>
+                        ?>
 
                        </div>
+                       </div>   
 
-                      <?php  endif; }
+                      <?php  }
 
                      } ?>  
                      
-                  </div>   
+                  
              
           </div>
           </div>
