@@ -99,7 +99,7 @@ else{
 
            <div class="main-header-col2">
             <?php if ( class_exists( 'WooCommerce' ) ){
-              amaz_store_product_search_box_mobile();
+              amaz_store_product_search_box();
              } ?>
            </div>
 

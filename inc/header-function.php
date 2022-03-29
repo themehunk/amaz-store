@@ -286,12 +286,6 @@ function amaz_store_product_search_box(){
      }         
 }
 
-function amaz_store_product_search_box_mobile(){  
-    if (shortcode_exists( 'th-aps' )) {
-    echo do_shortcode('[th-aps]');          
-  }   
-}
-
 
 function amaz_store_product_cart(){
 
