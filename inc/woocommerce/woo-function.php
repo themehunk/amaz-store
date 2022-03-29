@@ -305,17 +305,18 @@ function amaz_store_add_to_compare_fltr($pid = ''){
 if (!function_exists('amaz_store_whish_list')) {
 function amaz_store_whish_list($pid = ''){
        if( shortcode_exists( 'yith_wcwl_add_to_wishlist' )){
-       echo '<div class="thunk-wishlist"><span class="thunk-wishlist-inner">'.do_shortcode('[yith_wcwl_add_to_wishlist product_id='.$pid.' icon="fa fa-heart" label='.__('wishlist','amaz-store').' already_in_wishslist_text='.__('Already','amaz-store').' browse_wishlist_text='.__('Added','amaz-store').']' ).'</span></div>';
+       echo '<div class="thunk-wishlist">
+       <span class="thunk-wishlist-inner">'.do_shortcode('[yith_wcwl_add_to_wishlist product_id='.$pid.' icon="th-icon th-icon-heart1" label='.__('wishlist','amaz-store').' already_in_wishslist_text='.__('Already','amaz-store').' browse_wishlist_text='.__('Added','amaz-store').']' ).'</span></div>';
        }
  } 
 }
-if (!function_exists('amaz_store_whishlist_url')) {
+if (!function_exists('amaz_store_whishlist_url')){
 function amaz_store_whishlist_url(){
   if( class_exists( 'YITH_WCWL' )){
 $wishlist_page_id =  get_option( 'yith_wcwl_wishlist_page_id' );
 $wishlist_permalink = get_the_permalink( $wishlist_page_id ); ?>
 <a class="whishlist" href="<?php echo esc_url( $wishlist_permalink ); ?>">
-        <i  class="fa fa-heart-o" aria-hidden="true"></i><span class="tooltiptext"><?php echo esc_html('Wishlist','amaz-store');?></span></a>
+        <span class="th-icon th-icon-heartline"></span><span class="tooltiptext"><?php echo esc_html('Wishlist','amaz-store');?></span></a>
 <?php } 
 }
 }
@@ -324,10 +325,10 @@ $wishlist_permalink = get_the_permalink( $wishlist_page_id ); ?>
 if (!function_exists('amaz_store_account')) {
 function amaz_store_account(){
  if ( is_user_logged_in() ){
-  $return = '<a class="account" href="'.get_permalink( get_option('woocommerce_myaccount_page_id') ).'"><i class="fa fa-user-o" aria-hidden="true"></i><span class="tooltiptext">'.__('Account','amaz-store').'</span></a>';
+  $return = '<a class="account" href="'.get_permalink( get_option('woocommerce_myaccount_page_id') ).'"><span class="th-icon th-icon-user"></span><span class="tooltiptext">'.__('Account','amaz-store').'</span></a>';
   } 
  else {
-  $return = '<a class="account" href="'.get_permalink( get_option('woocommerce_myaccount_page_id') ).'"><i class="fa fa-lock" aria-hidden="true"></i><span class="tooltiptext">'.__('Register','amaz-store').'</span></a>';
+  $return = '<a class="account" href="'.get_permalink( get_option('woocommerce_myaccount_page_id') ).'"><span class="th-icon th-icon-lock1"></span><span class="tooltiptext">'.__('Register','amaz-store').'</span></a>';
 }
  echo $return;
  }

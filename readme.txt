@@ -3,8 +3,8 @@ Contributors: ThemeHunk
 Tags: e-commerce, blog, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, add_editor_style, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready.
 Requires at least: WordPress 5.3
 Requires PHP: 5.4
-Tested up to: 5.9
-Stable tag: 1.0.9
+Tested up to: 5.9.2
+Stable tag: 1.1.0
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -23,6 +23,11 @@ Yes our theme supports builder
 Yes, this theme is tested with latest version of WordPress, you can use it for your site.
 
 == Changelog ==
+
+= 1.1.0 =
+* Theme Compatible with cart and search plugin.
+* Theme Icon Improve.
+
 = 1.0.9 =
 * Theme made compatible with dokan plugin.
 

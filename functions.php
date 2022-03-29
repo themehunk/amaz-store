@@ -329,6 +329,7 @@ function amaz_store_scripts(){
 	// enqueue css
 	$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 	wp_enqueue_style( 'font-awesome', AMAZ_STORE_THEME_URI . 'third-party/fonts/font-awesome/css/font-awesome.css', '', AMAZ_STORE_THEME_VERSION );
+	wp_enqueue_style( 'th-icon', AMAZ_STORE_THEME_URI . 'third-party/fonts/th-icon/style.css', '', AMAZ_STORE_THEME_VERSION );
 	wp_enqueue_style( 'animate', AMAZ_STORE_THEME_URI . 'css/animate.css','',AMAZ_STORE_THEME_VERSION);
 	wp_enqueue_style( 'owl.carousel-css', AMAZ_STORE_THEME_URI . 'css/owl.carousel.css','',AMAZ_STORE_THEME_VERSION);
 	wp_enqueue_style( 'amaz-store-pro-menu', AMAZ_STORE_THEME_URI . 'css/amaz-store-menu.css','',AMAZ_STORE_THEME_VERSION);	

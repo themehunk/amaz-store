@@ -272,10 +272,18 @@ if( $description || is_customize_preview() ):?>
 /***************************/
 // Product search
 /***************************/
-function amaz_store_product_search_box(){  
+function amaz_store_product_search_box(){
+
     if (shortcode_exists( 'th-aps' )) {
-    echo do_shortcode('[th-aps]');          
-  }        
+
+        echo do_shortcode('[th-aps]');
+
+     }elseif(shortcode_exists( 'tapsp' )){
+
+      echo do_shortcode('[tapsp]');
+
+
+     }         
 }
 
 function amaz_store_product_search_box_mobile(){  
@@ -283,6 +291,21 @@ function amaz_store_product_search_box_mobile(){
     echo do_shortcode('[th-aps]');          
   }   
 }
+
+
+function amaz_store_product_cart(){
+
+                 if ( shortcode_exists('taiowc') ){
+
+                  echo do_shortcode('[taiowc]');
+
+                }elseif( shortcode_exists('taiowcp') ){
+
+                  echo do_shortcode('[taiowcp]');
+
+                }       
+}
+
 /**********************************/
 // header icon function
 /**********************************/
@@ -368,7 +391,7 @@ add_action('amaz_store_site_preloader','amaz_store_preloader');
               <div class="thunk-icon">
         
                 <div class="header-icon">
-                  <a class="prd-search" href="#"><i class="fa fa-search"></i></a>     
+                  <a class="prd-search" href="#"><span class="th-icon th-icon-vector-search"></span></a>     
                      <?php 
                      if(class_exists( 'WooCommerce' )){
 
@@ -381,11 +404,7 @@ add_action('amaz_store_site_preloader','amaz_store_preloader');
                       <div class="cart-icon" > 
                          <?php 
 
-                         if ( shortcode_exists('taiowc') ){
-
-                                echo do_shortcode('[taiowc]');
-
-                              }
+                         amaz_store_product_cart();
 
                          ?>
                        </div>
@@ -419,14 +438,24 @@ function amazstore_mobile_navbar(){?>
 <div id="amazstore-mobile-bar">
   <ul>
     
-    <li><a class="gethome" href="<?php echo esc_url( get_home_url() ); ?>"><i class="icon below fa fa-home" aria-hidden="true"></i></a></li>
+    <li><a class="gethome" href="<?php echo esc_url( get_home_url() ); ?>"><span class="th-icon th-icon-home"></span></a></li>
+
     <li><?php amaz_store_whishlist_url(); ?>
+
     </li>
+
     <li>
       <a href="#" class="menu-btn" id="mob-menu-btn">           
-        <i class="icon fa fa-bars" aria-hidden="true"></i>      
+             <button type="button" class="menu-btn" id="menu-btn">
+                <div class="btn">
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </div>
+            </button>   
       </a>
     </li>
+
     <li><?php amaz_store_account();?></li>
     
     
