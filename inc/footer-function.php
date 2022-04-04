@@ -368,7 +368,7 @@ if ( ! function_exists( 'amaz_store_bottom_footer_conetnt_col2' ) ){
 function amaz_store_bottom_footer_conetnt_col2($content){ ?>
 <?php if($content=='text'){?>
 <div class='content-html'>
-  <?php echo esc_html(get_theme_mod('amaz_store_footer_bottom_col2_texthtml',  __( 'Add your content here', 'amaz-store' )));?>
+  <?php echo esc_html(get_theme_mod('amaz_store_bottom_footer_col2_texthtml',  __( 'Add your content here', 'amaz-store' )));?>
 </div>
 <?php }elseif($content=='menu'){
   if ( has_nav_menu('amaz-store-footer-menu' ) ) {?>

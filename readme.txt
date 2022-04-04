@@ -4,7 +4,7 @@ Tags: e-commerce, blog, grid-layout, one-column, two-columns, three-columns, fou
 Requires at least: WordPress 5.3
 Requires PHP: 5.4
 Tested up to: 5.9.2
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -23,6 +23,8 @@ Yes our theme supports builder
 Yes, this theme is tested with latest version of WordPress, you can use it for your site.
 
 == Changelog ==
+= 1.1.1 =
+* Bottom footer copyright issue resolved.
 
 = 1.1.0 =
 * Theme Compatible with cart and search plugin.
@@ -73,8 +75,8 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 Initial release
 
 == Upgrade Notice ==
-= 1.0.9 =
-* Theme made compatible with dokan plugin.
+= 1.1.1 =
+* Bottom footer copyright issue resolved.
 
 == Resources ==
  
