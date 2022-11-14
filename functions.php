@@ -397,3 +397,5 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 }
 //for shop page
 remove_action('woocommerce_init','th_compare_add_action_shop_list');
+//To disable th compare Pro button 
+remove_action('woocommerce_init', 'tpcp_add_action_shop_list');

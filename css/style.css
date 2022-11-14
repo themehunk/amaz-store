@@ -2752,7 +2752,8 @@ vertical-align: middle;
 .amaz-store-widget-content .textwidget,
 .amaz-store-widget-content .wp-block-group h2 + *,
 .woocommerce .amaz-store-widget-content ul.product_list_widget,
-.amaz-store-widget-content .widget-title + *{
+.amaz-store-widget-content .widget-title + *,
+.woocommerce .widget_rating_filter ul{
    border: 1px solid #eeeeee; 
    padding: 15px;
 }
@@ -8740,10 +8741,12 @@ float:left;
 .thunk-single-product-summary-wrap a.th-product-compare-btn.th-added-compare{
 color:#ff3377!important;
 }
-.thunk-single-product-summary-wrap a.th-product-compare-btn:before {
-    content: "\f021";
-    font-family: 'fontawesome';
+.thunk-single-product-summary-wrap a.th-product-compare-btn:before,
+.th-product-compare-btn.btn_type.th-added-compare::before, .th-product-compare-btn.icon_type.th-added-compare::before{
+    content: "\e917";
+    font-family: th-icon!important;
    font-size: 13px;
+   display: initial;
 }
 
 .thunk-single-product-summary-wrap a.th-product-compare-btn.loading:after {
