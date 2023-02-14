@@ -56,7 +56,7 @@ $layout       = get_theme_mod( 'store_layout', 'left' );
 
                 <?php } else { ?>
 
-                    <p class="dokan-info"><?php esc_html_e( 'No products were found of this vendor!', 'dokan-lite' ); ?></p>
+                    <p class="dokan-info"><?php esc_html_e( 'No products were found of this vendor!', 'amaz-store' ); ?></p>
 
                 <?php } ?>
             </div>
