@@ -7247,7 +7247,7 @@ padding:0
     background-color: #ff3377;
     font-size:18px;
     right: 30px;
-    bottom: 108px;
+    bottom: 152px;
     position: fixed;
     text-align: center;
     cursor: pointer;
@@ -10655,7 +10655,7 @@ display: none;
 }
 #move-to-top {
     right: 30px;
-    bottom: 58px;
+    bottom: 152px;
 }
 .thunk-wishlist .yith-wcwl-add-button > a i {
     font-size: 12px;
@@ -10774,6 +10774,7 @@ width:50%;
 }
 .thunk-icon a .th-icon{
     font-size: 1.6rem;
+    color: #FFF;
 }
 }
 @media screen and (max-width:550px){
