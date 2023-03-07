@@ -133,6 +133,11 @@ define( 'AMAZ_STORE_THEME_SETTINGS', 'amaz-store-settings' );
                  'img' => 'icon-128x128.png',
                 'active_filename' => 'wp-popup-builder/wp-popup-builder.php',
             ), 
+            'unlimited-blocks' => array(
+                'name' => esc_html__( 'Unlimited blocks For Gutenberg', 'amaz-store' ),
+                 'img' => 'icon-128x128.png',
+                'active_filename' => 'unlimited-blocks/unlimited-blocks.php',
+            ), 
             'woocommerce' => array(
                 'name' => esc_html__( 'Woocommerce', 'amaz-store' ),
                  'img' => 'icon-128x128.png',
@@ -196,7 +201,6 @@ define( 'AMAZ_STORE_THEME_SETTINGS', 'amaz-store-settings' );
             ),
         ) );
 
-        remove_theme_support( 'widgets-block-editor' );
 	}
 endif;
 add_action( 'after_setup_theme', 'amaz_store_setup' );
