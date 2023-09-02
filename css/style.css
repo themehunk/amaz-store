@@ -8491,7 +8491,7 @@ font-size:1.8rem;
 /* Category Toggle  */
 .menu-category-list{
   position: relative;
-  margin: 0 20px;
+  margin: 0 21px;
 }
 .menu-category-list ul[data-menu-style="vertical"]{
   width: 251px;
