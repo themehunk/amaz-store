@@ -8778,6 +8778,9 @@ color:#ff3377!important;
 .wishlist-title-container{
 display:none;
 }
+.sold-individually .top-store-quantity {
+    display: none;
+}
 /* Dokan Plugin Css  */
 @media screen and (max-width: 1200px){
 /*hedaer*/
