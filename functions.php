@@ -11,7 +11,7 @@
  * Theme functions and definitions
  */
 if ( ! function_exists( 'amaz_store_setup' ) ) :
-define( 'AMAZ_STORE_THEME_VERSION','1.0.0');
+define( 'AMAZ_STORE_THEME_VERSION','1.1.9');
 define( 'AMAZ_STORE_THEME_DIR', get_template_directory() . '/' );
 define( 'AMAZ_STORE_THEME_URI', get_template_directory_uri() . '/' );
 define( 'AMAZ_STORE_THEME_SETTINGS', 'amaz-store-settings' );
@@ -26,7 +26,7 @@ define( 'AMAZ_STORE_THEME_SETTINGS', 'amaz-store-settings' );
 		/*
 		 * Make theme available for translation.
 		 */
-		load_theme_textdomain( 'amaz-store', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'amaze-store', get_template_directory() . '/languages' );
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 		/*
