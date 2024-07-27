@@ -8318,7 +8318,10 @@ padding-left: 15px;
   color: #fff;
 }
 .amazstore_proshowprd_four .thunk-product{
-  padding: 2px;
+  padding: 20px;
+}
+.amazstore_proshowprd_four .owl-nav{
+  top: -39px!important;
 }
 .mobile-nav-bar{
 display:none;
@@ -8565,6 +8568,9 @@ font-size:1.8rem;
 .thunk-product:hover .thunk-product-hover{
 border-top:none;
 }
+.thunk-woo-product-list .thunk-product {
+   border: 1px solid transparent;
+}
 .thunk-woo-product-list .thunk-product-wrap:hover .thunk-product{
     /*box-shadow: 0 0 15px #eee;*/
     -webkit-box-shadow: 0px 1px 30px rgb(62 68 90 / 9%);
@@ -8647,6 +8653,9 @@ a.add_to_wishlist span{
   background: #008000;
   color: #FFF;
   font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .woocommerce .thunk-product .th-add-to-cart a:hover{
   background: #008000;
