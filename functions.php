@@ -139,11 +139,11 @@ define( 'AMAZ_STORE_THEME_SETTINGS', 'amaz-store-settings' );
                  'img' => 'icon-128x128.png',
                 'active_filename' => 'wp-popup-builder/wp-popup-builder.php',
             ), 
-            'unlimited-blocks' => array(
-                'name' => esc_html__( 'Unlimited blocks For Gutenberg', 'amaz-store' ),
-                 'img' => 'icon-128x128.png',
-                'active_filename' => 'unlimited-blocks/unlimited-blocks.php',
-            ), 
+            'vayu-blocks' => array(
+				'name' => esc_html__( 'Vayu blocks For Gutenberg', 'amaz-store' ),
+				'img' => 'icon-128x128.png',
+				'active_filename' => 'vayu-blocks/vayu-blocks.php',
+				),
             'woocommerce' => array(
                 'name' => esc_html__( 'Woocommerce', 'amaz-store' ),
                  'img' => 'icon-128x128.gif',
@@ -172,28 +172,6 @@ define( 'AMAZ_STORE_THEME_SETTINGS', 'amaz-store-settings' );
                  'img' => 'icon-128x128.png',
                 'active_filename' => 'themehunk-customizer/themehunk-customizer.php',
             ),
-
-            'one-click-demo-import' => array(
-                'name' => esc_html__( 'One Click Demo Import', 'amaz-store' ),
-                'img' => 'icon-128x128.png',
-                'active_filename' => 'one-click-demo-import/one-click-demo-import.php',
-            ), 
-            'woocommerce' => array(
-                'name' => esc_html__( 'Woocommerce', 'amaz-store' ),
-                'img' => 'icon-128x128.gif',
-                'active_filename' => 'woocommerce/woocommerce.php',
-            ),
-            'th-advance-product-search' => array(
-            'name' => esc_html__( 'TH Advance Product Search', 'amaz-store' ),
-            'img' => 'icon-128x128.gif',
-            'active_filename' => 'th-advance-product-search/th-advance-product-search.php',
-            ),
-
-            'th-all-in-one-woo-cart' => array(
-                 'name' => esc_html__( 'TH All In One Woo Cart', 'amaz-store' ),
-                  'img' => 'icon-128x128.gif',
-                 'active_filename' => 'th-all-in-one-woo-cart/th-all-in-one-woo-cart.php',
-             ),
 
         ));
 
