@@ -25,6 +25,13 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 = 1.1.9 =
 * New: New theme.json version 3 added.
 * Update: Theme Option updated.
+* Update: New Wishlist added.
+* New: Vayu Blocks added in recommended plugins.
+* New: Theme added in new imprter.
+* Update: Welcome tab style issue updated.
+* New: Twitter share button added. 
+* Update: Video tab removed.
+* Update: Theme tested with new importer.
 
 = 1.1.8 =
 * Update: Theme made compatible with WordPress 6.6.

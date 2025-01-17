@@ -8736,7 +8736,8 @@ margin-right:14px;
 float:left;
 }
 
-.thunk-single-product-summary-wrap a.th-product-compare-btn{
+.thunk-single-product-summary-wrap a.th-product-compare-btn,
+.summary .yith-wcwl-add-to-wishlist-button{
     border: 1px solid!important;
     border-radius: 0;
     color: #9c9c9c!important;
@@ -8789,6 +8790,75 @@ display:none;
 }
 .sold-individually .top-store-quantity {
     display: none;
+}
+/* New Wishlist 2025  */
+.summary .yith-wcwl-add-to-wishlist-button{
+  font-size: initial;
+}
+
+.summary .yith-wcwl-add-to-wishlist-button__label{
+  display: none;
+}
+.summary .yith-wcwl-add-to-wishlist-button:before{
+    content: "\e912";
+    font-family: th-icon;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+.summary .yith-wcwl-add-to-wishlist-button--added:before{
+    content: "\e909";
+}
+.summary .yith-add-to-wishlist-button-block--single{
+    margin: 0;
+    float: left;
+}
+.theme-amaz-store .yith-wcwl-add-to-wishlist-button svg{
+    display: none;
+}
+.theme-amaz-store .yith-wcwl-add-to-wishlist-button:before{
+     content: "\e912";
+    font-family: th-icon;
+}
+.theme-amaz-store .yith-wcwl-add-to-wishlist-button--added .yith-wcwl-add-to-wishlist-button__label{
+    display: none;
+}
+.theme-amaz-store .yith-wcwl-add-to-wishlist-button__label{
+  display: none;
+}
+.theme-amaz-store .yith-add-to-wishlist-button-block{
+  margin: 0;
+}
+.thunk-wishlist-inner{
+     display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    padding: 0;
+    position: relative;
+    vertical-align: top;
+    border: 1px solid #EEE;
+    margin: 0;
+    margin-right: 4px;
+    letter-spacing: initial;
+    color: #000;
+    text-align: center;
+    font-weight: normal;
+    background: #fff;
+    border-radius: 100%;
+    width: 30px;
+    background: #f7f7f7;
+    color: #444;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+.thunk-wishlist-inner a{
+  font-size: inherit!important;
 }
 /* Dokan Plugin Css  */
 @media screen and (max-width: 1200px){
@@ -9140,7 +9210,8 @@ margin-right:0;
 }
 .summary .yith-wcwl-add-button a, .summary .yith-wcwl-wishlistaddedbrowse a, 
 .summary .yith-wcwl-wishlistexistsbrowse a, 
-.woocommerce .entry-summary a.compare.button,.thunk-single-product-summary-wrap a.th-product-compare-btn{
+.woocommerce .entry-summary a.compare.button,.thunk-single-product-summary-wrap a.th-product-compare-btn,
+ .summary .yith-wcwl-add-to-wishlist-button{
   width: 35px;
   height: 35px;
   line-height: 35px;
@@ -10419,7 +10490,8 @@ min-width:70px;
  .summary .yith-wcwl-wishlistaddedbrowse a,
   .summary .yith-wcwl-wishlistexistsbrowse a,
   .woocommerce .entry-summary a.compare.button,
-  .thunk-single-product-summary-wrap a.th-product-compare-btn {
+  .thunk-single-product-summary-wrap a.th-product-compare-btn,
+   .summary .yith-wcwl-add-to-wishlist-button {
     height: 30px;
     line-height: 30px;
     width: 30px;

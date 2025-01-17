@@ -157,8 +157,8 @@ a.plugin-detail.thickbox.open-plugin-details-modal {
 }
 
 .rp-two-column.welcome-tabs{
-    flex-direction: column;
-    height: 851px;
+    flex-direction: row;
+/*    height: 851px;*/
     justify-content: flex-start;
 }
 .tab-left {
@@ -177,15 +177,9 @@ a.plugin-detail.thickbox.open-plugin-details-modal {
     margin-bottom: 35px;
 }
 
-
-
-
 .main {
     display: flex;
 }
-
-
-
 
 /* Create an active/current tablink class */
 .th-option-bottom-hdr .tablinks.active {
@@ -212,8 +206,6 @@ width: 50%;
     line-height: 1.5;
     font-size: 16px;
 }
-
-
 .content-wrap{
     width: 100%;
     position: relative;
@@ -228,7 +220,6 @@ width: 50%;
     width: 25%;
     padding-left: 20px;
 }
-
 .sidebar{
     
     padding: 10px 5px 5px;
@@ -249,8 +240,6 @@ width: 50%;
     line-height: 1.6;
     font-size: 14px;
 }
-
-
 .tabs-list a{
     display: inline-block;
     padding: 20px;
@@ -264,12 +253,10 @@ width: 50%;
 .tabs-list a.active{
     background: #FFF;
 }
-
 .th-column img {
     width: 128px;
     border: 1px solid #efefef;
 }
-
 .facebook-gropup{
 display: flex;
     align-items: center;
@@ -287,7 +274,6 @@ display: flex;
 .facebook-gropup:hover{
 color:#fff;
 }
-
 /** customizer links **/
  
  .card-content{
@@ -494,6 +480,9 @@ display: flex;
 }
 .get-child{
     display: none!important;
+}
+.content-wrap a{
+    text-decoration: none;
 }
 @media (min-width: 768px){
 .theme_link {
