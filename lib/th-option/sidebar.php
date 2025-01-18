@@ -11,17 +11,12 @@
             <div class="section">
                 <h3><?php _e('Leave us a review','amaz-store'); ?></h3>
                 <p><?php _e('We would love to hear your feedback.','amaz-store'); ?> </p>
-                 <a href="https://wordpress.org/support/theme/amaz-store/reviews/?rate=5#new-post" target="_blank" class="sidebar-link"><?php _e('Submit review','amaz-store'); ?></a>
+                 <a href="https://wordpress.org/support/theme/amaz-store/reviews/?rate=5#new-post" target="_blank" class="sidebar-link"><?php _e('Submit Review','amaz-store'); ?></a>
 
             </div>
             <hr>
 
-            <div class="section">
-                <h3><?php _e('Video Tutorials','amaz-store'); ?></h3>
-                <p><?php _e('Want a guide? We have video tutorials to walk you through getting started.','amaz-store'); ?> </p>
-                <a href="<?php echo esc_url('https://www.youtube.com/c/ThemeHunk'); ?>" target="_blank" class="sidebar-link"><?php _e('Watch Videos','amaz-store'); ?></a>
-            </div>
-            <hr>
+            
 
             <div class="section">
                 <h3><?php _e('Support','amaz-store'); ?> </h3>

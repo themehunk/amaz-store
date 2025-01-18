@@ -1,9 +1,8 @@
 == Theme: Amaz Store ==
 Contributors: ThemeHunk
 Tags: wide-blocks, block-patterns, block-styles, editor-style, e-commerce, blog, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, add_editor_style, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready.
-Requires at least: WordPress 5.3
-Requires PHP: 5.4
-Tested up to: 6.6
+Requires PHP: 5.5
+Tested up to: 6.7
 Stable tag: 1.1.9
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
@@ -25,6 +24,14 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 == Changelog ==
 = 1.1.9 =
 * New: New theme.json version 3 added.
+* Update: Theme Option updated.
+* Update: New Wishlist added.
+* New: Vayu Blocks added in recommended plugins.
+* New: Theme added in new imprter.
+* Update: Welcome tab style issue updated.
+* New: Twitter share button added. 
+* Update: Video tab removed.
+* Update: Theme tested with new importer.
 
 = 1.1.8 =
 * Update: Theme made compatible with WordPress 6.6.
@@ -101,8 +108,9 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 Initial release
 
 == Upgrade Notice ==
-= 1.1.8 =
-* Update: Theme made compatible with WordPress 6.6.
+= 1.1.9 =
+* New: New theme.json version 3 added.
+* Update: Theme Option updated.
 
 == Resources ==
  
