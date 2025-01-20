@@ -8823,6 +8823,9 @@ display:none;
      content: "\e912";
     font-family: th-icon;
 }
+.theme-amaz-store .yith-wcwl-add-to-wishlist-button--added:before{
+   content: "\e909";
+}
 .theme-amaz-store .yith-wcwl-add-to-wishlist-button--added .yith-wcwl-add-to-wishlist-button__label{
     display: none;
 }
