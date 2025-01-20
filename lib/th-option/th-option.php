@@ -10,7 +10,7 @@ add_action('admin_menu', array($this,'menu_tab'));
     add_action( 'wp_ajax_default_home',array($this, 'default_home') );
 }
 function menu_tab() {
-    $menu_title = esc_html__('Get Started with Amaz Store Options', 'amaz-store');
+    $menu_title = esc_html__('Amaz Store Options', 'amaz-store');
     add_theme_page( esc_html__( 'Amaz Store', 'amaz-store' ), $menu_title, 'edit_theme_options', 'amaz_store_thunk_started',array($this,'tab_page'));
 
 }
