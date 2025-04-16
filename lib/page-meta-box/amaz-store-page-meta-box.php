@@ -17,37 +17,6 @@ if ( ! function_exists( 'amaz_store_admin_scripts' ) ) :
 endif;
 add_action( 'admin_enqueue_scripts', 'amaz_store_admin_scripts' );
 
-$prefix='amaz_store_';
-
-$meta_boxes = array(
-      array(
-        'id' => 'open-meta-box',
-        'title' => esc_html__('Dynamic Sidebar','amaz-store'),
-        'pages' => array('page','post','product'),// custom post type array('page','post', 'link')
-        'context' => 'side',
-        'priority' => 'low',
-        'fields' => array(
-            array(
-                'name' => esc_html__('Sidebar','amaz-store'),
-                'id' => $prefix . 'sidebar_dyn',
-                'type' => 'select',
-                'std' => 'right',
-                'options' => array( 
-                    array("value" => 'default',"name" => esc_html__('Customizer Settings','amaz-store')),
-                    array("value" => 'right',"name" => esc_html__('Right Sidebar','amaz-store')),
-                    array("value" => 'no-sidebar',"name" => esc_html__('No Sidebar','amaz-store')),
-                    array("value" => 'left',"name" =>  esc_html__('Left Sidebar','amaz-store')),
-                    
-                 )
-             ),
-              
-        )
-    )
-);
-foreach ($meta_boxes as $meta_box){
-    $my_box = new amaz_store_thMetaDataClass($meta_box);
-}
-
 class amaz_store_thMetaDataClass {
  
     protected $_meta_box;
@@ -55,7 +24,7 @@ class amaz_store_thMetaDataClass {
     // create meta box based on given data
     function __construct($meta_box) {
         $this->_meta_box = $meta_box;
-        add_action('admin_menu', array(&$this, 'add'));
+        add_action('add_meta_boxes', array(&$this, 'add'));
  
         add_action('save_post', array(&$this, 'save'));
     }
@@ -151,3 +120,37 @@ class amaz_store_thMetaDataClass {
         }
     }
 }
+
+function amaz_store_register_meta_boxes() {
+$prefix='amaz_store_';
+
+$meta_boxes = array(
+      array(
+        'id' => 'open-meta-box',
+        'title' => esc_html__('Dynamic Sidebar','amaz-store'),
+        'pages' => array('page','post','product'),// custom post type array('page','post', 'link')
+        'context' => 'side',
+        'priority' => 'low',
+        'fields' => array(
+            array(
+                'name' => esc_html__('Sidebar','amaz-store'),
+                'id' => $prefix . 'sidebar_dyn',
+                'type' => 'select',
+                'std' => 'right',
+                'options' => array( 
+                    array("value" => 'default',"name" => esc_html__('Customizer Settings','amaz-store')),
+                    array("value" => 'right',"name" => esc_html__('Right Sidebar','amaz-store')),
+                    array("value" => 'no-sidebar',"name" => esc_html__('No Sidebar','amaz-store')),
+                    array("value" => 'left',"name" =>  esc_html__('Left Sidebar','amaz-store')),
+                    
+                 )
+             ),
+              
+        )
+    )
+);
+foreach ($meta_boxes as $meta_box){
+    $my_box = new amaz_store_thMetaDataClass($meta_box);
+}
+}
+add_action( 'init', 'amaz_store_register_meta_boxes' );
