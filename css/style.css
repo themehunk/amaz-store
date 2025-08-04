@@ -3699,7 +3699,7 @@ a.add_to_cart_button.ajax_add_to_cart.loading{
     font-size: 20px;
     line-height: 27px;
 }*/
-.woocommerce a.added_to_cart{
+.woocommerce .thunk-product .th-add-to-cart a.added_to_cart{
 font-size:0;
 display:none;
 }
@@ -3748,11 +3748,14 @@ a.opn-quick-view-text::before {
 .woocommerce a.compare.button::before, 
 .woocommerce ul.products li .product-button-hover .add_to_wishlist::before {
     font-family: "FontAwesome";
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
     font-size: 14px;
     margin: 0;
+}
+.woocommerce a.compare.button.loading::before{
+  display: none;
 }
 /*.woocommerce .thunk-product-hover .button.th-button::before,
 .thunk-product-hover .button.product_type_simple::before{
@@ -5820,7 +5823,6 @@ border-radius:3px 0px 0px 3px;
     border: 0;
     padding: 20px;
 }
-.woocommerce-checkout .thunk-content-wrap{display:-webkit-flex;}
 .woocommerce #order_review table.shop_table thead th {
     font-size: 15px;
     letter-spacing: 1px;
@@ -8862,6 +8864,11 @@ display:none;
 }
 .thunk-wishlist-inner a{
   font-size: inherit!important;
+}
+/* Cart & checkout block styles   */
+ .woocommerce-cart .wp-block-woocommerce-cart,
+ .woocommerce-checkout .wc-block-checkout{
+  font-size: .9rem;
 }
 /* Dokan Plugin Css  */
 @media screen and (max-width: 1200px){
