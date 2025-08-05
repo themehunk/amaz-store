@@ -177,7 +177,8 @@ else{
 	</div>
 	<?php }  ?>
 	</div> 
-	<header class="<?php echo esc_attr($above_header_page); ?>">
+  <?php do_action( 'amaz_store_before_header' ); ?>
+	<header class="amaz-store-header <?php echo esc_attr($above_header_page); ?>">
 		<?php do_action( 'amaz_store_sticky_header' ); ?> 
         <!-- sticky header -->
         <?php do_action( 'amaz_store_main_header' ); ?> 
@@ -185,4 +186,5 @@ else{
 		
 		<!-- end below-header -->
 	</header> <!-- end header -->
+  <?php do_action( 'amaz_store_after_header' ); ?>
 		

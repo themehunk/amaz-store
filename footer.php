@@ -8,7 +8,8 @@
  * @since 1.0.0
  */ 
 ?>
-<footer>
+<?php do_action( 'amaz_store_before_footer' ); ?>
+<footer class="amaz-store-footer">
          <?php 
           // top-footer 
           do_action( 'amaz_store_top_footer' ); 
@@ -25,6 +26,7 @@
           do_action( 'amaz_store_woo_cart' ); 
         ?>
      </footer> <!-- end footer -->
+     <?php do_action( 'amaz_store_after_footer' ); ?>
     </div> <!-- end amazstore-site -->
 <?php wp_footer(); ?>
 </body>
