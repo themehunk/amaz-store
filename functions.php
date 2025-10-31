@@ -374,3 +374,9 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 remove_action('woocommerce_init','th_compare_add_action_shop_list');
 //To disable th compare Pro button 
 remove_action('woocommerce_init', 'tpcp_add_action_shop_list');
+
+// To disable Wishlist button for loop button at shop page
+remove_action( 'wp', 'thwl_hook_wishlist_loop_button_position');
+
+// To disable Wishlist button for loop button at single page
+// remove_action( 'wp', 'thwl_hook_wishlist_single_button_position');

@@ -3,7 +3,7 @@ Contributors: ThemeHunk
 Tags: wide-blocks, block-patterns, block-styles, editor-style, e-commerce, blog, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, add_editor_style, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready.
 Requires PHP: 5.5
 Tested up to: 6.7
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -22,6 +22,9 @@ Yes our theme supports builder
 Yes, this theme is tested with latest version of WordPress, you can use it for your site.
 
 == Changelog ==
+
+= 1.2.2 =
+* Update: TH Wishlist integrated.
 
 = 1.2.1 =
 * Update: Woocommerce checkout page .woocommerce-checkout .thunk-content-wrap {
@@ -119,8 +122,8 @@ Initial release
 
 == Upgrade Notice ==
 
-= 1.2.0 =
-* Update: _load_textdomain_just_in_time was called incorrectly issue resolved.
+= 1.2.2 =
+* Update: TH Wishlist integrated.
 
 == Resources ==
  

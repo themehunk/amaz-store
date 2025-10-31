@@ -304,16 +304,34 @@ function amaz_store_add_to_compare_fltr($pid = ''){
 /**********************/
 if (!function_exists('amaz_store_whish_list')) {
 function amaz_store_whish_list($pid = ''){
-       if( shortcode_exists( 'yith_wcwl_add_to_wishlist' )){
-       echo '<div class="thunk-wishlist">
-       <span class="thunk-wishlist-inner">'.do_shortcode('[yith_wcwl_add_to_wishlist product_id='.$pid.' icon="th-icon th-icon-heart1" label='.__('wishlist','amaz-store').' already_in_wishslist_text='.__('Already','amaz-store').' browse_wishlist_text='.__('Added','amaz-store').']' ).'</span></div>';
-       }
+       if( shortcode_exists( 'thwl_add_to_wishlist' )){ ?>
+        <div class="thunk-wishlist">
+            <span class="thunk-wishlist-inner">
+                <?php 
+                    if( shortcode_exists( 'thwl_add_to_wishlist' )) {
+                        echo do_shortcode('[thwl_add_to_wishlist 
+                            product_id="' . esc_attr($pid) . '" 
+                            add_icon="th-icon th-icon-heart1" 
+                            add_text="" 
+                            add_browse_icon="th-icon th-icon-favorite"
+                            browse_text=""
+                            theme_style="yes"
+                            icon_style="icon_only_no_style"
+                            custom_class="th-wishlist-integrated"
+                        ]');
+                    }
+                ?>
+            </span>
+        </div>
+
+   <?php    }
  } 
 }
 if (!function_exists('amaz_store_whishlist_url')){
 function amaz_store_whishlist_url(){
-  if( class_exists( 'YITH_WCWL' )){
-$wishlist_page_id =  get_option( 'yith_wcwl_wishlist_page_id' );
+  $wishlist_page_id = '';
+  if (class_exists( 'THWL_Wishlist' )) {
+$wishlist_page_id =  get_option( 'thwl_page_id' );
 $wishlist_permalink = get_the_permalink( $wishlist_page_id ); ?>
 <a class="whishlist" href="<?php echo esc_url( $wishlist_permalink ); ?>">
         <span class="th-icon th-icon-heartline"></span><span class="tooltiptext"><?php echo esc_html('Wishlist','amaz-store');?></span></a>
