@@ -5596,8 +5596,26 @@ border: 1px solid;
 .summary .thunk-compare{
   opacity: 1;
 }
-.summary .thunk-compare span{
+.summary .thunk-compare span,
+.summary .thunk-compare i{
   display: none;
+}
+.single-product .summary .th-product-compare-btn.icon_type{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 9px;
+}
+.woocommerece .thunk-single-product-summary-wrap a.th-product-compare-btn{
+  margin-left: 10px;
+  display: inline-flex;
+}
+.summary .thunk-compare .checkbox_type span{
+  display: inline-flex;
+  margin-left: 5px;
+}
+.summary .thunk-compare .th-product-compare-btn.checkbox_type{
+    margin: 0;
 }
 .summary .thw-add-to-wishlist-button-wrap.th-wishlist-single{
   float: left;
@@ -8888,6 +8906,9 @@ display:none;
  .woocommerce-cart .wp-block-woocommerce-cart,
  .woocommerce-checkout .wc-block-checkout{
   font-size: .9rem;
+}
+.wc-block-cart__submit .wc-block-cart__submit-button{
+  text-decoration: none!important;
 }
 /* Dokan Plugin Css  */
 @media screen and (max-width: 1200px){
