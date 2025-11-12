@@ -8550,8 +8550,8 @@ font-size:1.8rem;
 .thunk-product-hover{
     position: absolute;
     display: block;
-    left: 0;
-    right:0;
+    left: -1px;
+    right: -1px;
     top:108%;
     background:#fff;
     padding-bottom: 15px;

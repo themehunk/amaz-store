@@ -25,6 +25,7 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 = 1.2.2 =
 * Update: TH Wishlist integrated.
+* Update: thunk-product-hover style issue resolved.
 
 = 1.2.1 =
 * Update: Woocommerce checkout page .woocommerce-checkout .thunk-content-wrap {
