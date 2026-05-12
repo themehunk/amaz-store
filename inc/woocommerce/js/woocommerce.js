@@ -10,7 +10,6 @@
             var $this = this;
             $this.listGridView();
             $this.OffCanvas();
-            $this.cartDropdown();
             $this.AddtoCartQuanty();
             $this.CategoryTabFilter();
             $this.ProductSlide();
@@ -85,63 +84,7 @@
                });
 
              },
-      cartDropdown: function (){
-           /* woo, wc_add_to_cart_params */
-              if ( typeof wc_add_to_cart_params === 'undefined' ){
-               return false;
-              }
-
-               $( document ).on( 'click', '.ajax_add_to_cart', function(e){ // Remove button selector
-                 e.preventDefault();
-                var data1 = {
-                 'action': 'amaz_store_product_count_update'
-                };
-                 $.post(
-                 woocommerce_params.ajax_url, // The AJAX URL
-                 data1, // Send our PHP function
-                 function(response_data){
-                 $('a.cart-content').html(response_data);
-                 $( ".return.wc-backward" ).remove();
-                 $('body').toggleClass('cart-pan-active');
-                 $('.cart-overlay').toggleClass('open');
-                 }
-               );
-             });
-          // Ajax remove cart item
-               $( document ).on( 'click', 'a.remove', function(e){ // Remove button selector
-               e.preventDefault();
-          // AJAX add to cart request
-              var $thisbutton = $( this );
-              if ( $thisbutton.is( '.remove' ) ){
-                //Check if the button has a product ID
-               if ( ! $thisbutton.attr( 'data-product_id' ) ){ 
-              return true;
-               }
-            }
-              $product_id = $thisbutton.attr( 'data-product_id' );
-              var data = {'product_id':$product_id,
-             'action': 'amaz_store_product_remove'
-            };
-            $.post(
-            woocommerce_params.ajax_url, // The AJAX URL
-            data, // Send our PHP function
-            function(response){
-            $('.open-quickcart-dropdown').html(response);
-            var data = {
-           'action': 'amaz_store_product_count_update'
-            };
-           $.post(
-           woocommerce_params.ajax_url, // The AJAX URL
-           data, // Send our PHP function
-           function(response_data){
-           $('a.cart-content').html(response_data);
-           }
-         );
-       }
-   );
-      return false;
-  });
-},  
+      
        AddtoCartQuanty: function (){
                 $('form.cart').on( 'click', 'button.plus, button.minus', function(){
                 // Get current quantity values

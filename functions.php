@@ -11,7 +11,7 @@
  * Theme functions and definitions
  */
 if ( ! function_exists( 'amaz_store_setup' ) ) :
-define( 'AMAZ_STORE_THEME_VERSION','1.2.1');
+define( 'AMAZ_STORE_THEME_VERSION','1.2.4');
 define( 'AMAZ_STORE_THEME_DIR', get_template_directory() . '/' );
 define( 'AMAZ_STORE_THEME_URI', get_template_directory_uri() . '/' );
 define( 'AMAZ_STORE_THEME_SETTINGS', 'amaz-store-settings' );
@@ -109,6 +109,12 @@ define( 'AMAZ_STORE_THEME_SETTINGS', 'amaz-store-settings' );
          // Recommend plugins
         add_theme_support( 'recommend-plugins', array(
 
+        	 'th-store-one' => array(
+				'name' => esc_html__( 'TH Store One – A powerful all in one WooCommerce toolkit', 'amaz-store' ),
+				'img' => 'icon-128x128.png',
+				'active_filename' => 'th-store-one/th-store-one.php',
+				),
+        	 
         	'themehunk-customizer' => array(
                 'name' => esc_html__( 'Themehunk Customizer (Highly Recommended)', 'amaz-store' ),
                  'img' => 'icon-128x128.png',
@@ -142,7 +148,7 @@ define( 'AMAZ_STORE_THEME_SETTINGS', 'amaz-store-settings' );
 		   ),
             'lead-form-builder' => array(
                 'name' => esc_html__( 'Lead Form Builder', 'amaz-store' ),
-                 'img' => 'icon-128x128.png',
+                 'img' => 'icon-128x128.gif',
                 'active_filename' => 'lead-form-builder/lead-form-builder.php',
             ),
             'th-variation-swatches' => array(
