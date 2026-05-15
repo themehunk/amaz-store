@@ -11,7 +11,7 @@
  * Theme functions and definitions
  */
 if ( ! function_exists( 'amaz_store_setup' ) ) :
-define( 'AMAZ_STORE_THEME_VERSION','1.2.4');
+define( 'AMAZ_STORE_THEME_VERSION','1.2.3');
 define( 'AMAZ_STORE_THEME_DIR', get_template_directory() . '/' );
 define( 'AMAZ_STORE_THEME_URI', get_template_directory_uri() . '/' );
 define( 'AMAZ_STORE_THEME_SETTINGS', 'amaz-store-settings' );
