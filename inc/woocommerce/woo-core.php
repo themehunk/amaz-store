@@ -56,8 +56,8 @@ if ( ! class_exists( 'amaz_store_Pro_Woocommerce_Ext' ) ) :
 			// Replace Store Sidebars.
 			add_filter( 'amaz_store_get_sidebar', array( $this, 'amaz_store_replace_store_sidebar' ) );
 		    // quick view ajax.
-			add_action( 'wp_ajax_alm_load_product_quick_view', array( $this, 'amaz_store_load_product_quick_view_ajax' ) );
-			add_action( 'wp_ajax_nopriv_alm_load_product_quick_view', array( $this, 'amaz_store_load_product_quick_view_ajax' ) );
+			add_action( 'wp_ajax_thnk_load_product_quick_view', array( $this, 'amaz_store_load_product_quick_view_ajax' ) );
+			add_action( 'wp_ajax_nopriv_thnk_load_product_quick_view', array( $this, 'amaz_store_load_product_quick_view_ajax' ) );
 			add_action('amaz_store_woo_quick_view_product_summary', array( $this, 'amaz_store_woo_single_product_content_structure' ), 10, 1 );
 			//shop
 			 add_action('woocommerce_before_shop_loop', array($this, 'amaz_store_before_shop_loop'), 35);
@@ -134,36 +134,68 @@ if ( ! class_exists( 'amaz_store_Pro_Woocommerce_Ext' ) ) :
 			add_theme_support( 'wc-product-gallery-lightbox' );
 			add_theme_support( 'wc-product-gallery-slider' );
 		}
+
+		/**
+ * Safely get current WC_Product instance (or null).
+ *
+ * @return WC_Product|null
+ */
+private function amaz_store_get_current_product() {
+    global $product;
+
+    // If global $product exists and is a WC_Product, use it.
+    if ( ! empty( $product ) && ( $product instanceof WC_Product ) ) {
+        return $product;
+    }
+
+    // Fallback: try to get product for current post ID.
+    $post_id = get_the_ID();
+    if ( $post_id && function_exists( 'wc_get_product' ) ) {
+        $p = wc_get_product( $post_id );
+        if ( $p instanceof WC_Product ) {
+            return $p;
+        }
+    }
+
+    // Nothing found.
+    return null;
+}
+
+
 		/**
 		 * Product Flip Image
 		 */
+
 		function amaz_store_product_flip_image(){
-			global $product;
-			$hover_style = get_theme_mod( 'amaz_store_woo_product_animation' );
+    $hover_style = get_theme_mod( 'amaz_store_woo_product_animation' );
 
-			if ( 'swap' === $hover_style ) {
+    // only proceed for configured hover styles
+    if ( ! in_array( $hover_style, array( 'swap', 'slide' ), true ) ) {
+        return;
+    }
 
-				$attachment_ids = $product->get_gallery_image_ids();
+    // get product safely
+    $product = $this->amaz_store_get_current_product();
+    if ( ! ( $product instanceof WC_Product ) ) {
+        return;
+    }
 
-				if ( $attachment_ids ) {
+    $attachment_ids = $product->get_gallery_image_ids();
+    if ( empty( $attachment_ids ) || ! is_array( $attachment_ids ) ) {
+        return;
+    }
 
-					$image_size = apply_filters( 'single_product_archive_thumbnail_size', 'shop_catalog' );
+    $image_size = apply_filters( 'single_product_archive_thumbnail_size', 'shop_catalog' );
 
-					echo apply_filters( 'open_woocommerce_amaz_store_product_flip_image', wp_get_attachment_image( reset( $attachment_ids ), $image_size, false, array( 'class' => 'show-on-hover' ) ) );
-				}
-			}
-			if ('slide' === $hover_style ) {
+    if ( 'swap' === $hover_style ) {
+        $image_html = apply_filters( 'open_woocommerce_amaz_store_product_flip_image', wp_get_attachment_image( reset( $attachment_ids ), $image_size, false, array( 'class' => 'show-on-hover' ) ) );
+        echo wp_kses_post( $image_html );
+    } elseif ( 'slide' === $hover_style ) {
+        $image_html = apply_filters( 'amaz_store_woocommerce_product_flip_image', wp_get_attachment_image( reset( $attachment_ids ), $image_size, false, array( 'class' => 'show-on-slide' ) ) );
+        echo wp_kses_post( $image_html );
+    }
+}
 
-				$attachment_ids = $product->get_gallery_image_ids();
-
-				if ( $attachment_ids ) {
-
-					$image_size = apply_filters( 'single_product_archive_thumbnail_size', 'shop_catalog' );
-
-					echo apply_filters( 'amaz_store_woocommerce_product_flip_image', wp_get_attachment_image( reset( $attachment_ids ), $image_size, false, array( 'class' => 'show-on-slide' ) ) );
-				}
-			}
-		}
 		
 		/**
 		 * Post Class
@@ -174,61 +206,51 @@ if ( ! class_exists( 'amaz_store_Pro_Woocommerce_Ext' ) ) :
 		 */
 		function amaz_store_post_class( $classes ){
 
-			  // Only run inside WooCommerce product loops (shop, archive, related, upsell, cross-sell)
-    if ( !( is_product() && function_exists( 'wc_get_loop_prop' ) && !wc_get_loop_prop( 'name' ) )) {
+    // Only run inside WooCommerce product loops (shop, archive, related, upsell, cross-sell)
+    if ( !( is_product() && function_exists( 'wc_get_loop_prop' ) && ! wc_get_loop_prop( 'name' ) ) ) {
 
-			if (!amaz_store_is_blog()|| is_shop() || is_product_taxonomy() || post_type_exists( 'product' )){
-                $classes[] = 'thunk-woo-product-list';
-				$qv_enable = get_theme_mod( 'amaz_store_woo_quickview_enable',true);
-				if ( true == $qv_enable ){
-					$classes[] = 'opn-qv-enable';
+        if ( ! amaz_store_is_blog() || is_shop() || is_product_taxonomy() || post_type_exists( 'product' ) ) {
+            $classes[] = 'thunk-woo-product-list';
+            $qv_enable = get_theme_mod( 'amaz_store_woo_quickview_enable', true );
+            if ( true == $qv_enable ) {
+                $classes[] = 'opn-qv-enable';
+            }
+        }
 
-				}
-			}
-			if (is_shop() || is_product_taxonomy() ||  post_type_exists( 'product' )){
-				$hover_style = get_theme_mod( 'amaz_store_woo_product_animation' );
-				if ( '' !== $hover_style ) {
-					$classes[] = 'amaz-store-woo-hover-' . esc_attr($hover_style);
-				}
-				
-			}
-			if (is_shop() || is_product_taxonomy() || post_type_exists( 'product' )){
-			$single_product_tab_style = get_theme_mod( 'amaz_store_single_product_tab_layout','horizontal' );
-				if ( '' !== $single_product_tab_style ){
-					$classes[] = 'open-single-product-tab-'.esc_attr($single_product_tab_style);
-				}
-			}
-			if (is_shop() || is_product_taxonomy() || post_type_exists( 'product' )){
-			$shadow_style = get_theme_mod( 'amaz_store_product_box_shadow' );
-				if ( '' !== $shadow_style ){
-					$classes[] = 'open-shadow-' . esc_attr($shadow_style);
-				}	
-			}
-			if (is_shop() || is_product_taxonomy() || post_type_exists( 'product' )){
-			$shadow_hvr_style = get_theme_mod( 'amaz_store_product_box_shadow_on_hover' );
-				if ( '' !== $shadow_hvr_style ){
-					$classes[] = 'open-shadow-hover-' . esc_attr($shadow_hvr_style);
-				}	
-			}
-			if ( 'swap' === $hover_style && !is_page_template('frontpage.php') && (!is_admin()) && !amaz_store_is_blog()){
-            global $product;
-			$attachment_ids = $product->get_gallery_image_ids();
-			if(count($attachment_ids) > '0'){
-                $classes[] ='amaz-store-swap-item-hover';
-			  }
-			
-		    }
-		     if('slide' === $hover_style && !is_page_template('frontpage.php') &&  (!is_admin()) && !amaz_store_is_blog()){
-            global $product;
-			$attachment_ids = $product->get_gallery_image_ids();
-			if(count($attachment_ids) > '0'){
-                $classes[] ='amaz-store-slide-item-hover';
-			  }
-		
-		   }
-		}
-			return $classes;
-		}
+        // Hover / style classes
+        $hover_style = get_theme_mod( 'amaz_store_woo_product_animation' );
+        if ( '' !== $hover_style ) {
+            $classes[] = 'amaz-store-woo-hover-' . esc_attr( $hover_style );
+        }
+
+        $single_product_tab_style = get_theme_mod( 'amaz_store_single_product_tab_layout','horizontal' );
+        if ( '' !== $single_product_tab_style ) {
+            $classes[] = 'open-single-product-tab-' . esc_attr( $single_product_tab_style );
+        }
+
+        $shadow_style = get_theme_mod( 'amaz_store_product_box_shadow' );
+        if ( '' !== $shadow_style ) {
+            $classes[] = 'open-shadow-' . esc_attr( $shadow_style );
+        }
+        $shadow_hvr_style = get_theme_mod( 'amaz_store_product_box_shadow_on_hover' );
+        if ( '' !== $shadow_hvr_style ) {
+            $classes[] = 'open-shadow-hover-' . esc_attr( $shadow_hvr_style );
+        }
+
+        // Hover effects only when gallery images exist
+        if ( in_array( $hover_style, array( 'swap', 'slide' ), true ) && ! is_page_template( 'frontpage.php' ) && ! is_admin() && ! amaz_store_is_blog() ) {
+            $product = $this->amaz_store_get_current_product();
+            if ( $product instanceof WC_Product ) {
+                $attachment_ids = $product->get_gallery_image_ids();
+                if ( is_array( $attachment_ids ) && count( $attachment_ids ) > 0 ) {
+                    $classes[] = ( 'swap' === $hover_style ) ? 'amaz-store-swap-item-hover' : 'amaz-store-slide-item-hover';
+                }
+            }
+        }
+    }
+    return $classes;
+}
+
 		/**
 		 * Infinite Products Show on scroll
 		 *
@@ -309,7 +331,10 @@ if ( ! class_exists( 'amaz_store_Pro_Woocommerce_Ext' ) ) :
 			);
            wp_localize_script( 'amaz-store-woocommerce-js', 'amazstore',  $localize );	
            wp_enqueue_script('open-quick-view', AMAZ_STORE_THEME_URI.'inc/woocommerce/quick-view/js/quick-view.js', array( 'jquery' ), '', true );
-           wp_localize_script('open-quick-view', 'amazstoreqv', array('ajaxurl' => admin_url( 'admin-ajax.php' )));
+           wp_localize_script('open-quick-view', 'amazstoreqv', array(
+           	'ajaxurl' => esc_url(admin_url( 'admin-ajax.php' )),
+           	'nonce'   => wp_create_nonce( 'th_quickview_nonce' ), 
+           ));
           
 		   }
 		/**
@@ -338,12 +363,17 @@ if ( ! class_exists( 'amaz_store_Pro_Woocommerce_Ext' ) ) :
 		 * Quick view on image
 		 */
 		function amaz_store_add_quick_view_on_img(){
-			global $product;
-            $button='';
-			$product_id = $product->get_id();
+		$product = $this->amaz_store_get_current_product();
+
+    // If no product available, bail early.
+    if ( ! ( $product instanceof WC_Product ) ) {
+        return;
+    }
+    $product_id = $product->get_id();
 
 			// Get label.
 			$label = __( 'Quick View', 'amaz-store' );
+			$button = '';
 
 			$button.='<div class="thunk-quik">
 			             <div class="thunk-quickview">
@@ -376,10 +406,45 @@ if ( ! class_exists( 'amaz_store_Pro_Woocommerce_Ext' ) ) :
 		 * Quick view ajax
 		 */
 		function amaz_store_load_product_quick_view_ajax(){
-			if ( ! isset( $_REQUEST['product_id'] ) ){
-				die();
-			}
-			$product_id = intval( $_REQUEST['product_id'] );
+
+
+			 // Verify nonce.
+			    check_ajax_referer( 'th_quickview_nonce', 'nonce' );
+
+			    // Validate product ID.
+			    $product_id = isset( $_POST['product_id'] )
+			        ? absint( wp_unslash( $_POST['product_id'] ) )
+			        : 0;
+
+			    // Invalid ID.
+			    if ( empty( $product_id ) ) {
+
+			        wp_send_json_error(
+			            array(
+			                'message' => esc_html__( 'Invalid product ID.', 'amaz-store' ),
+			            ),
+			            400
+			        );
+			    }
+
+			    // Get product.
+			    $product = wc_get_product( $product_id );
+
+			    // Validate product.
+			    if (
+			        ! $product ||
+			        'product' !== get_post_type( $product_id ) ||
+			        'publish' !== get_post_status( $product_id )
+			    ) {
+
+			        wp_send_json_error(
+			            array(
+			                'message' => esc_html__( 'Product not found.', 'amaz-store' ),
+			            ),
+			            404
+			        );
+			    }
+
 			// set the main wp query for the product.
 			wp( 'p=' . $product_id . '&post_type=product' );
 			// remove product thumbnails gallery.
@@ -390,6 +455,7 @@ if ( ! class_exists( 'amaz_store_Pro_Woocommerce_Ext' ) ) :
 			echo ob_get_clean();
 			die();
 		}
+
 		/**
 		 * Quick view actions
 		 */

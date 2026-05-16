@@ -76,7 +76,8 @@ jQuery(document).ready(function($){
 		$.ajax({
             url:amazstoreqv.ajaxurl,
 			data: {
-				action: 'alm_load_product_quick_view',
+				action: 'thnk_load_product_quick_view',
+				nonce  : amazstoreqv.nonce,
 				product_id: product_id
 			},
 			dataType: 'html',

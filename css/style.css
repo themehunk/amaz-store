@@ -8901,6 +8901,7 @@ display:none;
 .thunk-wishlist-inner a,
 .thunk-wishlist-inner .thw-icon{
   font-size: inherit!important;
+  color: inherit;
 }
 /* Cart & checkout block styles   */
  .woocommerce-cart .wp-block-woocommerce-cart,
