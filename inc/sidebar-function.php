@@ -5,7 +5,7 @@
 if ( ! function_exists( 'amaz_store_sidebar_layout' ) ){
 function amaz_store_sidebar_layout($page_post_meta_set='default', $default='no-sidebar'){
     $default_layout = get_theme_mod('amaz_store_sidebar_default_layout', $default );
-    $page_layout = get_theme_mod('amaz_store_sidebar_page_layout','default' );
+    $page_layout = get_theme_mod('amaz_store_sidebar_page_layout','no-sidebar' );
     $blog_layout = get_theme_mod('amaz_store_sidebar_blog_layout','default');
     $archive_layout = get_theme_mod('amaz_store_sidebar_archive_layout','default' );
     $woo_layout = get_theme_mod('amaz_store_sidebar_woo_layout','default' );
